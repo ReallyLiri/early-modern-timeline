@@ -1,41 +1,135 @@
 {
   "events": [
     {
-      "year": 1900,
-      "title": "event 1",
+      "year": 1585,
+      "title": "De Thiende",
       "tags": [
-        "tag1",
-        "tag3"
+        "decimal_fraction"
       ],
-      "description": "description 1",
-      "source": "source 1"
+      "author": "Simon Stevin",
+      "language": "Dutch",
+      "details": [
+        "This book introduced the decimal fraction's notation.",
+        "It extended the principles of Hindu-Arabic arithmetic to calculation. ",
+        "In the book, Stevin emphasized the utility of decimal arithmetic \"for all accounts encountered in the affairs of men\" and explained in an appendix how it could be applied to surveying, stereometry, astronomy, and mensuration. ",
+        "Stevin showed how the usual arithmetic of whole numbers could be extended to decimal fractions using rules that determined the positioning of the negative powers of 10 (1.2 \u21d2 2 is 10^-1\u2026).",
+        "Stevin's proposal required a rejection of the distinction in Euclidean geometry between magnitude, which is continuous, and number, which is a multitude of indivisible units. Decimal fractions seemed to imply that the unit could be subdivided and that arbitrary continuous magnitude could be represented numerically."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     },
     {
-      "year": 1910,
-      "title": "event 2",
+      "year": 1585,
+      "title": "La Disme",
       "tags": [
-        "tag1",
-        "tag2"
+        "decimal_fraction",
+        "publication"
       ],
-      "description": "description 1",
-      "source": "source 2"
+      "author": "Simon Stevin",
+      "language": "French",
+      "details": [
+        "A French version of \u201cDe Thiende\u201d",
+        "NPublished by the original author, in the same printing shop and the same year as the Dutch version."
+      ],
+      "source": "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
+    },
+    {
+      "year": 1623,
+      "title": "Johnson\u2019s \u201cArithmetic\u201d",
+      "tags": [
+        "decimal_fraction",
+        "publication"
+      ],
+      "author": "John Johnson",
+      "language": "English",
+      "city": "London",
+      "details": [
+        "Used decimal fractions."
+      ],
+      "source": "Denniss, 2006"
+    },
+    {
+      "year": 1678,
+      "title": "Cocker's Arithmetick",
+      "tags": [
+        "decimal_fraction",
+        "publication"
+      ],
+      "author": "Edward Cocker",
+      "language": "English",
+      "city": "London",
+      "details": [
+        "A famous \u201cArithmetic\u201d.",
+        "Ignored decimal fractions.",
+        "Grammar school mathematics textbook."
+      ],
+      "source": "Denniss, 2006"
+    },
+    {
+      "year": 1700,
+      "title": "According to Denniss (2006), decimal fractions held major significance only from the 18th century onwards",
+      "tags": [
+        "decimal_fraction"
+      ],
+      "details": [
+        "A possible reason, as suggested by Denniss (2006), is that in practical usage, they could often be circumvented by selecting a small base unit. Denniss (2006) asserts that even though decimal fractions were introduced as early as 1585, they experienced a slow adoption rate."
+      ],
+      "source": "Denniss, 2006"
+    },
+    {
+      "year": 1614,
+      "title": "Mirifici Logarithmorum Canonis Descriptio",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables"
+      ],
+      "author": "John Napier",
+      "language": "Latin",
+      "city": "Edinburgh",
+      "details": [
+        "The first published table of logarithms."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    },
+    {
+      "year": 1619,
+      "title": "Mirifici logarithmorum canonis constructio",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables",
+        "kinematic_model"
+      ],
+      "author": "John Napier",
+      "language": "Latin",
+      "city": "Edinburgh",
+      "details": [
+        "Published posthumously by Napier's son.",
+        "Explains the principles used in the construction of his tables.",
+        "He presented a kinematic model where one particle's speed decreases proportionally to its remaining distance to a fixed point, forming a geometrically decreasing sequence, while another moves at a constant speed, forming an arithmetically increasing sequence. He used this model to derive theorems for approximating values in both sequences."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     }
   ],
   "tags": {
-    "tag1": {
-      "name": "tag 1",
-      "description": "description 1",
-      "details": "details 1"
+    "decimal_fraction": {
+      "related_tags": [
+        "applied_math",
+        "hindu-arabic_numerals",
+        "magnitude_vs_number",
+        "geometric_magnitude",
+        "continuity"
+      ]
     },
-    "tag2": {
-      "name": "tag 2",
-      "description": "description 2",
-      "details": "details 2"
+    "logarithm": {
+      "details": "By large, logarithms simplify calculations because adding/subtracting is often easier than multiplying/dividing. Since log(mn) = log(m) + log(n) (or alternatively, a^ma^n = a^(m+n))."
     },
-    "tag3": {
-      "name": "tag 3",
-      "description": "description 3",
-      "details": "details 3"
+    "kinematic_model": {
+      "related_tags": [
+        "geometric_magnitude",
+        "precalculus"
+      ],
+      "details": "Kinematic ideas appeared frequently in mathematics of the first half of the 17th century.\nProvided a clear and visualizable means for the generation of geometric magnitude.\nThe conception of a curve traced by a particle moving through space later played a significant role in the development of calculus."
     }
   }
 }
