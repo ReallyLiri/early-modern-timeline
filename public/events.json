@@ -1,0 +1,41 @@
+{
+  "events": [
+    {
+      "year": 1900,
+      "title": "event 1",
+      "tags": [
+        "tag1",
+        "tag3"
+      ],
+      "description": "description 1",
+      "source": "source 1"
+    },
+    {
+      "year": 1910,
+      "title": "event 2",
+      "tags": [
+        "tag1",
+        "tag2"
+      ],
+      "description": "description 1",
+      "source": "source 2"
+    }
+  ],
+  "tags": {
+    "tag1": {
+      "name": "tag 1",
+      "description": "description 1",
+      "details": "details 1"
+    },
+    "tag2": {
+      "name": "tag 2",
+      "description": "description 2",
+      "details": "details 2"
+    },
+    "tag3": {
+      "name": "tag 3",
+      "description": "description 3",
+      "details": "details 3"
+    }
+  }
+}
