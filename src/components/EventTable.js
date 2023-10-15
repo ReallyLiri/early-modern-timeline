@@ -44,8 +44,8 @@ function EventTable() {
 // Create a Set to store unique tags
     const uniqueTags = new Set();
 
-    events.forEach((event) => {
-        event.tags.forEach((tag) => {
+    events?.forEach((event) => {
+        event.tags?.forEach((tag) => {
             uniqueTags.add(tag);
         });
     });
