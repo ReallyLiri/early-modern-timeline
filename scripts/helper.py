@@ -41,6 +41,7 @@ def display_table(filter_bean: FilterBean = None):
     table_data = [to_table_row(event) for event in events]
     table = tabulate(table_data,  get_table_headers(), tablefmt="grid", stralign="left")
     print(table)
+    print("Total events: " + str(len(events)))
 
 
 def read_json() -> dict:

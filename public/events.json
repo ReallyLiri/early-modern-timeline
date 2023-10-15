@@ -92,6 +92,49 @@
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     },
     {
+      "year": 1616,
+      "title": "Briggs met Napier",
+      "tags": [
+        "logarithm"
+      ],
+      "details": [
+        "Briggs met Napier in Edinburgh.",
+        "Briggs discussed with Nappier his suggestion of base 10 logarithms",
+        "It is possible that the first meeting was in 1615."
+      ],
+      "source": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry\nhttps://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+    },
+    {
+      "year": 1617,
+      "title": "Briggs met Napier again",
+      "tags": [
+        "logarithm"
+      ],
+      "details": [
+        "Briggs met Napier in Edinburgh for the second time.",
+        "Briggs discussed with Nappier his suggestion of base 10 logarithms.",
+        "It is possible that this meeting was in 1616."
+      ],
+      "source": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry\nhttps://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+    },
+    {
+      "year": 1617,
+      "title": "Logarithmorum Chilias Prima",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables"
+      ],
+      "author": "Henry Briggs",
+      "language": "Latin",
+      "city": "London",
+      "details": [
+        "Includes tables of the logarithms from 1 to 1000, to 14 decimal places",
+        "A small booklet of 16 pages, privately printed, of which the first page was an introduction, and the remaining 15 pages were tables."
+      ],
+      "source": "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf"
+    },
+    {
       "year": 1619,
       "title": "Mirifici logarithmorum canonis constructio",
       "tags": [
@@ -109,6 +152,140 @@
         "He presented a kinematic model where one particle's speed decreases proportionally to its remaining distance to a fixed point, forming a geometrically decreasing sequence, while another moves at a constant speed, forming an arithmetically increasing sequence. He used this model to derive theorems for approximating values in both sequences."
       ],
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    },
+    {
+      "year": 1620,
+      "title": "Arithmetische und Geometrische Progreß Tabulen",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables",
+        "instruments"
+      ],
+      "author": "Jost Bürgi",
+      "language": "German",
+      "city": "Prague",
+      "details": [
+        "Jost Bürgi was a clock and instrument maker at the court",
+        "This table, which appeared a short time after Napier’s table of logarithms, has often been viewed by historians of mathematics as an independent invention (or discovery) of logarithms."
+      ],
+      "source": "https://inria.hal.science/inria-00543936/document\nhttps://bildsuche.digitale-sammlungen.de/index.html?c=viewer&l=de&bandnummer=bsb00082065&pimage=00019&v=100&nav="
+    },
+    {
+      "year": 1624,
+      "title": "Arithmetica Logarithmica",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables"
+      ],
+      "author": "Henry Briggs",
+      "language": "Latin",
+      "city": "London",
+      "details": [
+        "Advertised the utility of logarithms in expediting calculations.",
+        "Expound a number of methods to compute decimal logarithms.",
+        "Includes tables of logarithms from 1 to 20,000 and from 90,000 to 100,000 calculated to 14 decimal places."
+      ],
+      "source": "https://www.britannica.com/biography/Henry-Briggs#ref175711\nhttps://www.britannica.com/biography/Henry-Briggs#ref175711"
+    },
+    {
+      "year": 1627,
+      "title": "Tabulae Rudolphinae",
+      "tags": [
+        "publication",
+        "logarithm",
+        "precomputed_tables",
+        "astronomy"
+      ],
+      "author": "Johannes Kepler",
+      "language": "Latin",
+      "city": "Ulm",
+      "details": [
+        "Star catalogue and planetary table.",
+        "Based on Tycho Brahe's observations.",
+        "Includes logarithmic tables."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    },
+    {
+      "year": 1633,
+      "title": "Trigonometry in Britain",
+      "tags": [
+        "logarithm",
+        "trigonometry",
+        "publication"
+      ],
+      "details": [
+        "Discuss the application of logarithms to trigonometric functions.",
+        "Appeared posthumously."
+      ],
+      "source": "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf\nhttps://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry"
+    },
+    {
+      "year": 1489,
+      "title": "Behende und hupsche Rechnung auf allen kauffmanschafft",
+      "tags": [
+        "publication",
+        "notation"
+      ],
+      "author": "Johann Widmann",
+      "language": "German",
+      "city": "Leipzig",
+      "details": [
+        "The first book to use the + and - signs.",
+        "Includes many examples for aiding \"allen kauffmanschafft\""
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Widman/"
+    },
+    {
+      "year": 1494,
+      "title": "Summa de arithmetica, geometria, proportioni et proportionalita",
+      "tags": [
+        "publication",
+        "notation"
+      ],
+      "author": "Luca Pacioli",
+      "language": "Italian",
+      "city": "Venice",
+      "details": [
+        "Textbook and reference work.",
+        "Includes the first printed example of a set of plus and minus signs: p̄ for \"plus\" and m̄ for \"minus\"."
+      ],
+      "source": "(Sangster et al., 2008) "
+    },
+    {
+      "year": 1557,
+      "title": "The Whetstone of Witte",
+      "tags": [
+        "publication",
+        "notation"
+      ],
+      "author": "Robert Recorde",
+      "language": "English",
+      "city": "London",
+      "details": [
+        "The first book to use the = sign."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
+    },
+    {
+      "year": 1591,
+      "title": "In artem analyticam isagoge",
+      "tags": [
+        "publication",
+        "notation"
+      ],
+      "author": "François Viète",
+      "language": "Latin",
+      "city": "Tours",
+      "details": [
+        "Introduced letters to represent unknowns.",
+        "Used capital vowels for the unknowns and capital consonants for known quantities."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttp://scihi.org/francois-viete-algebra/"
+    },
+    {
     }
   ],
   "tags": {
@@ -122,14 +299,37 @@
       ]
     },
     "logarithm": {
-      "details": "By large, logarithms simplify calculations because adding/subtracting is often easier than multiplying/dividing. Since log(mn) = log(m) + log(n) (or alternatively, a^ma^n = a^(m+n))."
+      "related_tags": [
+        "applied_math",
+        "precomputed_tables"
+      ],
+      "details": [
+        "By large, logarithms simplify calculations because adding/subtracting is often easier than multiplying/dividing. Since log(mn) = log(m) + log(n) (or alternatively, a^ma^n = a^(m+n))."
+      ]
     },
     "kinematic_model": {
       "related_tags": [
         "geometric_magnitude",
-        "precalculus"
+        "precalculus",
+        "ratio_theory",
+        "curves"
       ],
-      "details": "Kinematic ideas appeared frequently in mathematics of the first half of the 17th century.\nProvided a clear and visualizable means for the generation of geometric magnitude.\nThe conception of a curve traced by a particle moving through space later played a significant role in the development of calculus."
+      "details": [
+        "Kinematic ideas appeared frequently in mathematics of the first half of the 17th century.",
+        "Provided a clear and visualizable means for the generation of geometric magnitude.",
+        "The conception of a curve traced by a particle moving through space later played a significant role in the development of calculus.",
+        "The Elements' ratio theory offered a way to express the different relationships among the quantities linked to moving bodies"
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttps://www.britannica.com/science/mathematics/Omar-Khayyam#ref65996"
+    },
+    "precomputed_tables": {
+      "related_tags": [
+        "applied_math",
+        "logarithm"
+      ],
+      "details": [
+        "Denniss's (2006) discusses Ready tables and reckoners as a mathematical trend. He notes the prevalence of pre-calculated results, which were sometimes included in books, and in some cases, the entire book consisted solely of tables."
+      ]
     }
   }
 }
