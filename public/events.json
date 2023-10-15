@@ -3,9 +3,7 @@
     {
       "year": 1585,
       "title": "De Thiende",
-      "tags": [
-        "decimal_fraction"
-      ],
+      "tags": ["decimal_fraction"],
       "author": "Simon Stevin",
       "language": "Dutch",
       "details": [
@@ -20,10 +18,7 @@
     {
       "year": 1585,
       "title": "La Disme",
-      "tags": [
-        "decimal_fraction",
-        "publication"
-      ],
+      "tags": ["decimal_fraction", "publication"],
       "author": "Simon Stevin",
       "language": "French",
       "details": [
@@ -35,25 +30,17 @@
     {
       "year": 1623,
       "title": "Johnson\u2019s \u201cArithmetic\u201d",
-      "tags": [
-        "decimal_fraction",
-        "publication"
-      ],
+      "tags": ["decimal_fraction", "publication"],
       "author": "John Johnson",
       "language": "English",
       "city": "London",
-      "details": [
-        "Used decimal fractions."
-      ],
+      "details": ["Used decimal fractions."],
       "source": "Denniss, 2006"
     },
     {
       "year": 1678,
       "title": "Cocker's Arithmetick",
-      "tags": [
-        "decimal_fraction",
-        "publication"
-      ],
+      "tags": ["decimal_fraction", "publication"],
       "author": "Edward Cocker",
       "language": "English",
       "city": "London",
@@ -67,9 +54,7 @@
     {
       "year": 1700,
       "title": "According to Denniss (2006), decimal fractions held major significance only from the 18th century onwards",
-      "tags": [
-        "decimal_fraction"
-      ],
+      "tags": ["decimal_fraction"],
       "details": [
         "A possible reason, as suggested by Denniss (2006), is that in practical usage, they could often be circumvented by selecting a small base unit. Denniss (2006) asserts that even though decimal fractions were introduced as early as 1585, they experienced a slow adoption rate."
       ],
@@ -78,25 +63,17 @@
     {
       "year": 1614,
       "title": "Mirifici Logarithmorum Canonis Descriptio",
-      "tags": [
-        "publication",
-        "logarithm",
-        "precomputed_tables"
-      ],
+      "tags": ["publication", "logarithm", "precomputed_tables"],
       "author": "John Napier",
       "language": "Latin",
       "city": "Edinburgh",
-      "details": [
-        "The first published table of logarithms."
-      ],
+      "details": ["The first published table of logarithms."],
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     },
     {
       "year": 1616,
       "title": "Briggs met Napier",
-      "tags": [
-        "logarithm"
-      ],
+      "tags": ["logarithm"],
       "details": [
         "Briggs met Napier in Edinburgh.",
         "Briggs discussed with Nappier his suggestion of base 10 logarithms",
@@ -107,9 +84,7 @@
     {
       "year": 1617,
       "title": "Briggs met Napier again",
-      "tags": [
-        "logarithm"
-      ],
+      "tags": ["logarithm"],
       "details": [
         "Briggs met Napier in Edinburgh for the second time.",
         "Briggs discussed with Nappier his suggestion of base 10 logarithms.",
@@ -120,11 +95,7 @@
     {
       "year": 1617,
       "title": "Logarithmorum Chilias Prima",
-      "tags": [
-        "publication",
-        "logarithm",
-        "precomputed_tables"
-      ],
+      "tags": ["publication", "logarithm", "precomputed_tables"],
       "author": "Henry Briggs",
       "language": "Latin",
       "city": "London",
@@ -156,12 +127,7 @@
     {
       "year": 1620,
       "title": "Arithmetische und Geometrische Progreß Tabulen",
-      "tags": [
-        "publication",
-        "logarithm",
-        "precomputed_tables",
-        "instruments"
-      ],
+      "tags": ["publication", "logarithm", "precomputed_tables", "instruments"],
       "author": "Jost Bürgi",
       "language": "German",
       "city": "Prague",
@@ -174,11 +140,7 @@
     {
       "year": 1624,
       "title": "Arithmetica Logarithmica",
-      "tags": [
-        "publication",
-        "logarithm",
-        "precomputed_tables"
-      ],
+      "tags": ["publication", "logarithm", "precomputed_tables"],
       "author": "Henry Briggs",
       "language": "Latin",
       "city": "London",
@@ -192,12 +154,7 @@
     {
       "year": 1627,
       "title": "Tabulae Rudolphinae",
-      "tags": [
-        "publication",
-        "logarithm",
-        "precomputed_tables",
-        "astronomy"
-      ],
+      "tags": ["publication", "logarithm", "precomputed_tables", "astronomy"],
       "author": "Johannes Kepler",
       "language": "Latin",
       "city": "Ulm",
@@ -211,11 +168,7 @@
     {
       "year": 1633,
       "title": "Trigonometry in Britain",
-      "tags": [
-        "logarithm",
-        "trigonometry",
-        "publication"
-      ],
+      "tags": ["logarithm", "trigonometry", "publication"],
       "details": [
         "Discuss the application of logarithms to trigonometric functions.",
         "Appeared posthumously."
@@ -225,10 +178,7 @@
     {
       "year": 1489,
       "title": "Behende und hupsche Rechnung auf allen kauffmanschafft",
-      "tags": [
-        "publication",
-        "notation"
-      ],
+      "tags": ["publication", "notation"],
       "author": "Johann Widmann",
       "language": "German",
       "city": "Leipzig",
@@ -241,10 +191,7 @@
     {
       "year": 1494,
       "title": "Summa de arithmetica, geometria, proportioni et proportionalita",
-      "tags": [
-        "publication",
-        "notation"
-      ],
+      "tags": ["publication", "notation"],
       "author": "Luca Pacioli",
       "language": "Italian",
       "city": "Venice",
@@ -257,25 +204,17 @@
     {
       "year": 1557,
       "title": "The Whetstone of Witte",
-      "tags": [
-        "publication",
-        "notation"
-      ],
+      "tags": ["publication", "notation"],
       "author": "Robert Recorde",
       "language": "English",
       "city": "London",
-      "details": [
-        "The first book to use the = sign."
-      ],
+      "details": ["The first book to use the = sign."],
       "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
     },
     {
       "year": 1591,
       "title": "In artem analyticam isagoge",
-      "tags": [
-        "publication",
-        "notation"
-      ],
+      "tags": ["publication", "notation"],
       "author": "François Viète",
       "language": "Latin",
       "city": "Tours",
@@ -285,8 +224,7 @@
       ],
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttp://scihi.org/francois-viete-algebra/"
     },
-    {
-    }
+    {}
   ],
   "tags": {
     "decimal_fraction": {
@@ -299,10 +237,7 @@
       ]
     },
     "logarithm": {
-      "related_tags": [
-        "applied_math",
-        "precomputed_tables"
-      ],
+      "related_tags": ["applied_math", "precomputed_tables"],
       "details": [
         "By large, logarithms simplify calculations because adding/subtracting is often easier than multiplying/dividing. Since log(mn) = log(m) + log(n) (or alternatively, a^ma^n = a^(m+n))."
       ]
@@ -323,10 +258,7 @@
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttps://www.britannica.com/science/mathematics/Omar-Khayyam#ref65996"
     },
     "precomputed_tables": {
-      "related_tags": [
-        "applied_math",
-        "logarithm"
-      ],
+      "related_tags": ["applied_math", "logarithm"],
       "details": [
         "Denniss's (2006) discusses Ready tables and reckoners as a mathematical trend. He notes the prevalence of pre-calculated results, which were sometimes included in books, and in some cases, the entire book consisted solely of tables."
       ]

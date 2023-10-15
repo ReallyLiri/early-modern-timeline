@@ -6,5 +6,5 @@ type Data = {
 };
 
 export const fetchDataAsync = async () => {
-    return await(await fetch("/events.json")).json() as Data;
-}
+  return (await (await fetch("/events.json")).json()) as Data;
+};
