@@ -286,6 +286,154 @@
       "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttp://scihi.org/francois-viete-algebra/"
     },
     {
+      "year": 1636,
+      "title": "Methodus ad disquirendam maximam et minimam et de tangentibus linearum curvarum",
+      "tags": [
+        "publication",
+        "notation",
+        "curves",
+        "analytic_geometry",
+        "manuscript"
+      ],
+      "author": "Pierre de Fermat",
+      "language": "Latin",
+      "details": [
+        "Introduces a method of finding maxima, minima, and tangents to various curves.",
+        "Adopted Viète’s notation.",
+        "Considered an equation among two variables.",
+        "Showed that, if the equation is a quadratic, then the curve is a conic section."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    },
+    {
+      "year": 1637,
+      "title": "La Géométrie",
+      "tags": [
+        "publication",
+        "notation",
+        "curves",
+        "analytic_geometry",
+        "construction"
+      ],
+      "author": "René Descartes",
+      "language": "French",
+      "details": [
+        "Published in 1637 as an appendix to his famous Discourse on Method.",
+        "Includes new notation: variables are represented by letters at the end of the alphabet, and known quantities by letters at the beginning of the alphabet. Includes exponential notation to indicate powers.",
+        "Do not adhere to the principle of homogeneity, which states that all terms in an equation must have the same dimension.",
+        "Shows by construction how to represent multiplication and divisions of lines.",
+        "Attempts to find the construction of of solutions to geometric problems by means of instruments that were acceptable generalizations of ruler and compass.",
+        "Emphasize construction"
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    },
+    {
+      "year": 1632,
+      "title": "Van Schooten Junior was first introduced to Descartes",
+      "tags": [
+        "meeting"
+      ],
+      "individuals": [
+        "Frans van Schooten Junior",
+        "René Descartes",
+        "Jacobus Golius"
+      ],
+      "city": "Leiden",
+      "details": [
+        "Van Schooten was first introduced to Descartes through Golius."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": 1637,
+      "title": "Van Schooten Junior met Descartes",
+      "tags": [
+        "meeting"
+      ],
+      "individuals": [
+        "Frans van Schooten Junior",
+        "René Descartes"
+      ],
+      "city": "Leiden",
+      "details": [
+        "Van Schooten met Descartes through.",
+        "This was before the publication of La Géométrie.",
+        "Descartes asked van Schooten Junior to assist with making the illustrations."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": 1637,
+      "title": "Recueil de calcul pour l'intelligence de la Geometrie de Monsr des Cartes",
+      "tags": [
+        "publication"
+      ],
+      "author": "Frans van Schooten",
+      "language": "French",
+      "city": "Leiden",
+      "details": [
+        "The title can be translated to: \"Compendium of calculation for the understanding of the geometry of Descartes\""
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": 1641,
+      "title": "Van Schooten Junior met Mersenne",
+      "tags": [
+        "meeting"
+      ],
+      "individuals": [
+        "Frans van Schooten",
+        "Marin Mersenne"
+      ],
+      "city": "Paris",
+      "details": [
+        "In Paris, Van Schooten learnt about the mathematical advances made by Viète and Fermat as well as having the opportunity to further his studies of Descartes' works."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": "1646",
+      "title": "Viète Opera mathematica",
+      "tags": [
+        "publication",
+        "notation"
+      ],
+      "author": "Frans van Schooten",
+      "language": "Latin",
+      "city": "Leiden",
+      "details": [],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": 1649,
+      "title": "Latin translation of La Géométrie",
+      "tags": [
+        "publication",
+        "analytic_geometry"
+      ],
+      "author": "Frans van Schooten",
+      "language": "Latin",
+      "city": "Leiden",
+      "details": [
+        "Translation of La Géométrie into Latin."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+    },
+    {
+      "year": 1659,
+      "title": "Extended latin translation of La Géométrie",
+      "tags": [
+        "publication",
+        "analytic_geometry"
+      ],
+      "author": "Frans van Schooten",
+      "language": "Latin",
+      "city": "Leiden",
+      "details": [
+        "Published between 1559-1661."
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
     }
   ],
   "tags": {
@@ -330,6 +478,46 @@
       "details": [
         "Denniss's (2006) discusses Ready tables and reckoners as a mathematical trend. He notes the prevalence of pre-calculated results, which were sometimes included in books, and in some cases, the entire book consisted solely of tables."
       ]
+    },
+    "curves": {
+      "related_tags": [
+        "analytic_geometry",
+        "praising_antiquity"
+      ],
+      "details": [
+        "The conception of a curve traced by a particle moving through space later played a significant role in the development of calculus.",
+        "According to \"Mathematics in the 17th and 18th centuries\" (Britannica), The increased interest in curves can be partially attributed to:\n(a) The recovery and Latin translation of the classical treatises of Apollonius, Archimedes, and Pappus.\n(b) The increasing importance of curves in applied fields such as astronomy, mechanics, optics, and stereometry."
+      ],
+      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+    }
+  },
+  "individuals": {
+    "Frans van Schooten": {
+      "related_individuals": [
+        "René Descartes",
+        "Marin Mersenne",
+        "Jacobus Golius"
+      ],
+      "groups": [
+        "Leiden group"
+      ]
+    }
+  },
+  "communities": {
+    "Leiden group": {
+      "city": "Leiden",
+      "details": [
+        "A group of mathematicians who advanced Descartes' work."
+      ],
+      "years": [
+        1650,
+        180
+      ],
+      "individuals": [
+        "Frans van Schooten",
+        "Christiaan Huygens"
+      ],
+      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/\nhttps://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     }
   }
 }
