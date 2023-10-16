@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Transformable } from "./Transformable";
+import { TIMELINE_COLOR } from "../theme";
 
 export type TimelineNode = {
     year: number;
@@ -13,7 +14,7 @@ type Props = {
     onYearSelected: (year: number) => void;
 };
 
-const NodeWidthRem = 2
+const NodeWidthRem = 1.5
 const NodeYearDiffPx = 10
 
 const Container = styled(Transformable)`
@@ -28,15 +29,17 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding: 0 1rem;
+  padding: 0 2rem 0 1rem;
 `;
 
 const HorizontalLine = styled.div`
   position: relative;
   height: 4px;
-  background-color: red;
-  top: ${ NodeWidthRem / 2 }rem;
+  background-color: ${TIMELINE_COLOR};
+  top: ${ NodeWidthRem * 0.7 }rem;
   z-index: 0;
+  margin: 0 1rem;
+  border-radius: 1rem;
 `;
 
 const YearNode = styled.div<{ diffFromPrevYear: number }>`
@@ -44,7 +47,8 @@ const YearNode = styled.div<{ diffFromPrevYear: number }>`
   height: ${ NodeWidthRem }rem;
   width: ${ NodeWidthRem }rem;
   border-radius: 50%;
-  background-color: green;
+  background-color: white;
+  border: solid ${TIMELINE_COLOR};
   z-index: 1;
   margin-left: ${ ({ diffFromPrevYear }) => ( diffFromPrevYear - 1 ) * NodeYearDiffPx }px;
 `;

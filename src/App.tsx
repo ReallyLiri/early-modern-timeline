@@ -3,6 +3,13 @@ import { useEffect, useMemo, useState } from "react";
 import { TimelineEvent } from "./data/TimelineEvent";
 import { fetchDataAsync } from "./data/data";
 import { sortedUniq } from "lodash";
+import styled from "styled-components";
+
+const Title = styled.div`
+  margin: 2rem 0;
+    font-size: 1.4rem;
+  text-align: center;
+  `
 
 const nodeTitle = (events: TimelineEvent[]) => {
   if (events.length === 1) {
@@ -52,6 +59,7 @@ function App() {
 
   return (
     <>
+        <Title>Timeline</Title>
       <Timeline nodes={nodes} onYearSelected={() => {}} />
     </>
   );
