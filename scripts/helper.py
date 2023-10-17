@@ -31,12 +31,19 @@ def should_filter(event: dict, filter_bean: FilterBean):
     return False
 
 
+def sort_event_key(event: dict):
+    year = event.get('year', 0)
+    if isinstance(year, str):
+        raise RuntimeError(f"Error: year is not an int\n{event}")
+    return year
+
+
 def display_table(filter_bean: FilterBean = None):
     data = read_json()
 
     events = data.get('events', [])
     events = [event for event in events if not should_filter(event, filter_bean)]
-    events = sorted(events, key=lambda event: event.get('year', 0))
+    events = sorted(events, key=sort_event_key)
 
     table_data = [to_table_row(event) for event in events]
     table = tabulate(table_data,  get_table_headers(), tablefmt="grid", stralign="left")
