@@ -15,7 +15,9 @@
         "Stevin showed how the usual arithmetic of whole numbers could be extended to decimal fractions using rules that determined the positioning of the negative powers of 10 (1.2 \u21d2 2 is 10^-1\u2026).",
         "Stevin's proposal required a rejection of the distinction in Euclidean geometry between magnitude, which is continuous, and number, which is a multitude of indivisible units. Decimal fractions seemed to imply that the unit could be subdivided and that arbitrary continuous magnitude could be represented numerically."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1585,
@@ -30,7 +32,9 @@
         "A French version of \u201cDe Thiende\u201d",
         "NPublished by the original author, in the same printing shop and the same year as the Dutch version."
       ],
-      "source": "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
+      "sources": [
+        "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
+      ]
     },
     {
       "year": 1623,
@@ -45,7 +49,9 @@
       "details": [
         "Used decimal fractions."
       ],
-      "source": "Denniss, 2006"
+      "sources": [
+        "Denniss, 2006"
+      ]
     },
     {
       "year": 1678,
@@ -62,7 +68,9 @@
         "Ignored decimal fractions.",
         "Grammar school mathematics textbook."
       ],
-      "source": "Denniss, 2006"
+      "sources": [
+        "Denniss, 2006"
+      ]
     },
     {
       "year": 1700,
@@ -73,7 +81,9 @@
       "details": [
         "A possible reason, as suggested by Denniss (2006), is that in practical usage, they could often be circumvented by selecting a small base unit. Denniss (2006) asserts that even though decimal fractions were introduced as early as 1585, they experienced a slow adoption rate."
       ],
-      "source": "Denniss, 2006"
+      "sources": [
+        "Denniss, 2006"
+      ]
     },
     {
       "year": 1614,
@@ -89,7 +99,9 @@
       "details": [
         "The first published table of logarithms."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1616,
@@ -102,7 +114,10 @@
         "Briggs discussed with Nappier his suggestion of base 10 logarithms",
         "It is possible that the first meeting was in 1615."
       ],
-      "source": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry\nhttps://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+      "sources": [
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry",
+        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+      ]
     },
     {
       "year": 1617,
@@ -115,7 +130,10 @@
         "Briggs discussed with Nappier his suggestion of base 10 logarithms.",
         "It is possible that this meeting was in 1616."
       ],
-      "source": "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry\nhttps://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+      "sources": [
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry",
+        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+      ]
     },
     {
       "year": 1617,
@@ -132,7 +150,9 @@
         "Includes tables of the logarithms from 1 to 1000, to 14 decimal places",
         "A small booklet of 16 pages, privately printed, of which the first page was an introduction, and the remaining 15 pages were tables."
       ],
-      "source": "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf"
+      "sources": [
+        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf"
+      ]
     },
     {
       "year": 1619,
@@ -151,25 +171,30 @@
         "Explains the principles used in the construction of his tables.",
         "He presented a kinematic model where one particle's speed decreases proportionally to its remaining distance to a fixed point, forming a geometrically decreasing sequence, while another moves at a constant speed, forming an arithmetically increasing sequence. He used this model to derive theorems for approximating values in both sequences."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1620,
-      "title": "Arithmetische und Geometrische Progreß Tabulen",
+      "title": "Arithmetische und Geometrische Progre\u00df Tabulen",
       "tags": [
         "publication",
         "logarithm",
         "precomputed_tables",
         "instruments"
       ],
-      "author": "Jost Bürgi",
+      "author": "Jost B\u00fcrgi",
       "language": "German",
       "city": "Prague",
       "details": [
-        "Jost Bürgi was a clock and instrument maker at the court",
-        "This table, which appeared a short time after Napier’s table of logarithms, has often been viewed by historians of mathematics as an independent invention (or discovery) of logarithms."
+        "Jost B\u00fcrgi was a clock and instrument maker at the court",
+        "This table, which appeared a short time after Napier\u2019s table of logarithms, has often been viewed by historians of mathematics as an independent invention (or discovery) of logarithms."
       ],
-      "source": "https://inria.hal.science/inria-00543936/document\nhttps://bildsuche.digitale-sammlungen.de/index.html?c=viewer&l=de&bandnummer=bsb00082065&pimage=00019&v=100&nav="
+      "sources": [
+        "https://inria.hal.science/inria-00543936/document",
+        "https://bildsuche.digitale-sammlungen.de/index.html?c=viewer&l=de&bandnummer=bsb00082065&pimage=00019&v=100&nav="
+      ]
     },
     {
       "year": 1624,
@@ -187,7 +212,10 @@
         "Expound a number of methods to compute decimal logarithms.",
         "Includes tables of logarithms from 1 to 20,000 and from 90,000 to 100,000 calculated to 14 decimal places."
       ],
-      "source": "https://www.britannica.com/biography/Henry-Briggs#ref175711\nhttps://www.britannica.com/biography/Henry-Briggs#ref175711"
+      "sources": [
+        "https://www.britannica.com/biography/Henry-Briggs#ref175711",
+        "https://www.britannica.com/biography/Henry-Briggs#ref175711"
+      ]
     },
     {
       "year": 1627,
@@ -206,7 +234,9 @@
         "Based on Tycho Brahe's observations.",
         "Includes logarithmic tables."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1633,
@@ -220,7 +250,10 @@
         "Discuss the application of logarithms to trigonometric functions.",
         "Appeared posthumously."
       ],
-      "source": "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf\nhttps://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry"
+      "sources": [
+        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf",
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry"
+      ]
     },
     {
       "year": 1489,
@@ -236,7 +269,9 @@
         "The first book to use the + and - signs.",
         "Includes many examples for aiding \"allen kauffmanschafft\""
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Widman/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Widman/"
+      ]
     },
     {
       "year": 1494,
@@ -250,9 +285,11 @@
       "city": "Venice",
       "details": [
         "Textbook and reference work.",
-        "Includes the first printed example of a set of plus and minus signs: p̄ for \"plus\" and m̄ for \"minus\"."
+        "Includes the first printed example of a set of plus and minus signs: p\u0304 for \"plus\" and m\u0304 for \"minus\"."
       ],
-      "source": "(Sangster et al., 2008) "
+      "sources": [
+        "(Sangster et al., 2008) "
+      ]
     },
     {
       "year": 1557,
@@ -267,7 +304,9 @@
       "details": [
         "The first book to use the = sign."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
+      ]
     },
     {
       "year": 1591,
@@ -276,14 +315,17 @@
         "publication",
         "notation"
       ],
-      "author": "François Viète",
+      "author": "Fran\u00e7ois Vi\u00e8te",
       "language": "Latin",
       "city": "Tours",
       "details": [
         "Introduced letters to represent unknowns.",
         "Used capital vowels for the unknowns and capital consonants for known quantities."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nhttp://scihi.org/francois-viete-algebra/"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries",
+        "http://scihi.org/francois-viete-algebra/"
+      ]
     },
     {
       "year": 1636,
@@ -299,15 +341,17 @@
       "language": "Latin",
       "details": [
         "Introduces a method of finding maxima, minima, and tangents to various curves.",
-        "Adopted Viète’s notation.",
+        "Adopted Vi\u00e8te\u2019s notation.",
         "Considered an equation among two variables.",
         "Showed that, if the equation is a quadratic, then the curve is a conic section."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1637,
-      "title": "La Géométrie",
+      "title": "La G\u00e9om\u00e9trie",
       "tags": [
         "publication",
         "notation",
@@ -316,7 +360,7 @@
         "construction",
         "precaculus"
       ],
-      "author": "René Descartes",
+      "author": "Ren\u00e9 Descartes",
       "language": "French",
       "details": [
         "Published in 1637 as an appendix to his famous Discourse on Method.",
@@ -327,7 +371,9 @@
         "Emphasize construction",
         "Presents a method for determination of tangents that could in principle be applied to all curves that can be described by polynomial equations in two variables. This method relied on finding the normal line (a line perpendicular to the tangent) to the curve by using a condition: it should be the unique radius intersecting the curve at only one point."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1632,
@@ -337,14 +383,16 @@
       ],
       "individuals": [
         "Frans van Schooten Junior",
-        "René Descartes",
+        "Ren\u00e9 Descartes",
         "Jacobus Golius"
       ],
       "city": "Leiden",
       "details": [
         "Van Schooten was first introduced to Descartes through Golius."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1637,
@@ -354,15 +402,17 @@
       ],
       "individuals": [
         "Frans van Schooten Junior",
-        "René Descartes"
+        "Ren\u00e9 Descartes"
       ],
       "city": "Leiden",
       "details": [
         "Van Schooten met Descartes through.",
-        "This was before the publication of La Géométrie.",
+        "This was before the publication of La G\u00e9om\u00e9trie.",
         "Descartes asked van Schooten Junior to assist with making the illustrations."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1637,
@@ -376,7 +426,9 @@
       "details": [
         "The title can be translated to: \"Compendium of calculation for the understanding of the geometry of Descartes\""
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1641,
@@ -390,13 +442,15 @@
       ],
       "city": "Paris",
       "details": [
-        "In Paris, Van Schooten learnt about the mathematical advances made by Viète and Fermat as well as having the opportunity to further his studies of Descartes' works."
+        "In Paris, Van Schooten learnt about the mathematical advances made by Vi\u00e8te and Fermat as well as having the opportunity to further his studies of Descartes' works."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1646,
-      "title": "Viète Opera mathematica",
+      "title": "Vi\u00e8te Opera mathematica",
       "tags": [
         "publication",
         "notation"
@@ -405,11 +459,13 @@
       "language": "Latin",
       "city": "Leiden",
       "details": [],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1649,
-      "title": "Latin translation of La Géométrie",
+      "title": "Latin translation of La G\u00e9om\u00e9trie",
       "tags": [
         "publication",
         "analytic_geometry"
@@ -418,13 +474,15 @@
       "language": "Latin",
       "city": "Leiden",
       "details": [
-        "Translation of La Géométrie into Latin."
+        "Translation of La G\u00e9om\u00e9trie into Latin."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/"
+      ]
     },
     {
       "year": 1659,
-      "title": "Extended latin translation of La Géométrie",
+      "title": "Extended latin translation of La G\u00e9om\u00e9trie",
       "tags": [
         "publication",
         "analytic_geometry",
@@ -439,7 +497,10 @@
         "Includes an appendix by Johan Hudde that simplifies Descartes' method for finding tangents to curves.",
         "According to the attached Britannica source, Newton was influenced by this work."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/\nhttps://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/",
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1635,
@@ -456,7 +517,9 @@
         "In his system, deriving simple results required intricate geometric considerations.",
         "Written in a turgid style"
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1655,
@@ -473,7 +536,9 @@
         "Expresses the area under a curve as the sum of an infinite series and used unrigorous inductions to determine its value.",
         "According to the atached Britannica source, Newton was influenced by this work."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1638,
@@ -489,7 +554,8 @@
       "city": "Leiden",
       "details": [
         "Discusses the motion of projectiles that consist of two components: a constant horizontal component and a vertical component that varies with time. The combination produces a parabolic curve."
-      ]
+      ],
+      "sources": []
     },
     {
       "year": 1644,
@@ -505,7 +571,11 @@
         "Discusses the cycloid, a curve traced by a point on the circumference of a circle as the circle rolls along a straight line.",
         "According to Gliozzi (1972), the work, was known throughout Italy and Europe and had intrinsic value. Through its clear exposition it diffused the geometry of Cavalieri, whose writings were difficult to read."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nGliozzi, Mario. “Torricelli, Evangelista.” In Dictionary of Scientific Biography, edited by C. C. Gillespie, xiii:433–440. New York: Scribner, 1972.\nWolfson, P. R. (2001). The Crooked Made Straight: Roberval and Newton on Tangents. The American Mathematical Monthly, 108(3), 206–216. https://doi.org/10.2307/2695381"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries",
+        "Gliozzi, Mario. \u201cTorricelli, Evangelista.\u201d In Dictionary of Scientific Biography, edited by C. C. Gillespie, xiii:433\u2013440. New York: Scribner, 1972.",
+        "Wolfson, P. R. (2001). The Crooked Made Straight: Roberval and Newton on Tangents. The American Mathematical Monthly, 108(3), 206\u2013216. https://doi.org/10.2307/2695381"
+      ]
     },
     {
       "year": 1643,
@@ -521,7 +591,9 @@
       "details": [
         "Toricelli gets in touch with Roberval and reports to him about his views and results on the centre of gravity of the parabola, the semigeneral paraboles, the surface of the cycloid and its history, the solid of revolution generated by a conic and the hyperbolic acute solid."
       ],
-      "source": "https://www.persee.fr/doc/rhs_0151-4105_1975_num_28_2_1131"
+      "sources": [
+        "https://www.persee.fr/doc/rhs_0151-4105_1975_num_28_2_1131"
+      ]
     },
     {
       "year": 1646,
@@ -537,7 +609,11 @@
         "Roberval accused Torricelli of plagiarism.",
         "According to the attached sources, nowadays historians largely believe they got to the results independently."
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/\nhttps://www.persee.fr/docAsPDF/rhs_0151-4105_1975_num_28_2_1131.pdf\nhttps://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Torricelli,_Evangelista"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/",
+        "https://www.persee.fr/docAsPDF/rhs_0151-4105_1975_num_28_2_1131.pdf",
+        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Torricelli,_Evangelista"
+      ]
     },
     {
       "year": 1670,
@@ -554,7 +630,10 @@
         "Show that the determinations of areas and tangents are inverse problems.",
         "Borrow's work, and particularly his Lectiones Geometricae, are highly regarded by historians of calculus."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries\nChild, 1916"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries",
+        "Child, 1916"
+      ]
     },
     {
       "year": 1671,
@@ -572,7 +651,9 @@
         "Used ideas from kinematics: a variable was a \"fluent\", it's rate of change was a \"fluxion\".",
         "Notation: a dot above a variable indicated a fluxion."
       ],
-      "source": "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     },
     {
       "year": 1736,
@@ -587,7 +668,8 @@
       "city": "London",
       "details": [
         "Newton's work was published, 65 years after it was written."
-      ]
+      ],
+      "sources": []
     }
   ],
   "tags": {
