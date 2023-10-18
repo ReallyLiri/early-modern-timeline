@@ -68,7 +68,7 @@ const YearNodeLine = styled.div<{index: number, top: number, left: number}>`
 
 const YearNodeTitle = styled.div<{index: number, top: number, left: number}>`
   position: absolute;
-  top: ${ ({ top, index }) => `calc(${top}px + ${(index % 2 === 0 ? -2.5 : 2.5)}rem )` };
+  top: ${ ({ top, index }) => `calc(${ top }px + ${ ( index % 2 === 0 ? -2.5 : 2.5 ) }rem )` };
   left: ${ ({ left }) => left }px;
   font-size: 0.8rem;
   text-wrap: nowrap;
@@ -78,7 +78,8 @@ const YearNodeTitle = styled.div<{index: number, top: number, left: number}>`
   background-color: ${ TIMELINE_COLOR };
   border: 2px solid white;
   pointer-events: none;
-  z-index: ${({index}) => MAX_Z_INDEX - index};
+  user-select: none;
+  z-index: ${ ({ index }) => MAX_Z_INDEX - index };
 `
 
 const YearNodeHover = styled.div<{index:number, top: number, left: number}>`

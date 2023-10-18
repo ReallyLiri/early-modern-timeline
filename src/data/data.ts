@@ -1,9 +1,8 @@
-import { TimelineEvent } from "./TimelineEvent";
+import {GeneratedSchemaForRoot as GeneratedTimelineEvents} from "./gen/events.schema";
 
-type TimelineEvents = {
-  events: TimelineEvent[];
-};
+export type TimelineEvents = GeneratedTimelineEvents
+export type TimelineEvent = TimelineEvents["events"][0];
 
 export const fetchEventsAsync = async () => {
-  return (await (await fetch("/events.json")).json()) as TimelineEvents;
+  return (await (await fetch("/data/events.json")).json()) as TimelineEvents;
 };

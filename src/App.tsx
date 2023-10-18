@@ -1,7 +1,6 @@
 import { Timeline, TimelineNode } from "./components/Timeline";
 import { useEffect, useMemo, useState } from "react";
-import { TimelineEvent } from "./data/TimelineEvent";
-import { fetchEventsAsync } from "./data/data";
+import { fetchEventsAsync, TimelineEvent } from "./data/data";
 import { sortedUniq } from "lodash";
 import styled from "styled-components";
 
@@ -56,7 +55,7 @@ function App() {
       })),
     [eventsByYear, years],
   );
-
+  
   return (
     <>
         <Title>Timeline</Title>
