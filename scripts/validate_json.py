@@ -12,4 +12,8 @@ def validate_events():
 
 
 if __name__ == '__main__':
-    validate_events()
+    try:
+        validate_events()
+    except Exception as e:
+        print("Validation failed with error: " + str(e))
+        exit(1)
