@@ -1,3 +1,2 @@
 #!/bin/bash
-python scripts/validate_json.py
-echo "Validated JSON"
+python scripts/validate_json.py || exit 1

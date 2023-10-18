@@ -11,9 +11,15 @@ def validate_events():
     validate(events, events_schema)
 
 
-if __name__ == '__main__':
+def validation_wrapper(func):
+    print("Starting validation")
     try:
-        validate_events()
+        func()
+        print("Validation successful")
     except Exception as e:
         print("Validation failed with error: " + str(e))
         exit(1)
+
+
+if __name__ == '__main__':
+    validation_wrapper(validate_events)
