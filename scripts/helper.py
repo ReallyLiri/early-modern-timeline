@@ -2,10 +2,11 @@ import argparse
 import json
 from dataclasses import dataclass
 
+import click
 from tabulate import tabulate
 
 
-json_file = '/Users/mia/dev/personal/early-modern-timeline/public/events.json'
+json_file = '/public/data/events.json'
 
 
 @dataclass
@@ -31,12 +32,19 @@ def should_filter(event: dict, filter_bean: FilterBean):
     return False
 
 
+def sort_event_key(event: dict):
+    year = event.get('year', 0)
+    if isinstance(year, str):
+        raise RuntimeError(f"Error: year is not an int\n{event}")
+    return year
+
+
 def display_table(filter_bean: FilterBean = None):
     data = read_json()
 
     events = data.get('events', [])
     events = [event for event in events if not should_filter(event, filter_bean)]
-    events = sorted(events, key=lambda event: event.get('year', 0))
+    events = sorted(events, key=sort_event_key)
 
     table_data = [to_table_row(event) for event in events]
     table = tabulate(table_data,  get_table_headers(), tablefmt="grid", stralign="left")
@@ -88,15 +96,35 @@ def to_table_row(event: dict) -> list:
     return row
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Display data from a JSON file in a formatted table.")
-    parser.add_argument('--tags', nargs='+', help='Filter events by tags')
-    parser.add_argument('--start-year', type=int, help='Filter events by start year')
-    parser.add_argument('--end-year', type=int, help='Filter events by end year')
-    args = parser.parse_args()
-    filter_bean = FilterBean(tags=args.tags, start_year=args.start_year, end_year=args.end_year)
+def show_all_tags():
+    data = read_json()
+    events = data.get('events', [])
+    tags_to_show = set()
+    for event in events:
+        tags_to_show.update(event.get('tags', []))
+    print('\n'.join(sorted(tags_to_show)))
+
+
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+@click.option('--tags-filter', multiple=True, help='Filter events by tags')
+@click.option('--start-year', type=int, help='Filter events by start year')
+@click.option('--end-year', type=int, help='Filter events by end year')
+def display(tags_filter, start_year, end_year):
+    filter_bean = FilterBean(tags=tags_filter, start_year=start_year, end_year=end_year)
     display_table(filter_bean)
 
 
+@cli.command()
+@click.option('--show', is_flag=True, help='Show all tags')
+def tags(show):
+    if show:
+        show_all_tags()
+
+
 if __name__ == "__main__":
-    main()
+    cli()

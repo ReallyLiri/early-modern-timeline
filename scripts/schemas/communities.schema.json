@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "communities": {
+      "type": "object",
+      "properties": {
+        "Leiden group": {
+          "type": "object",
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "details": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "years": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              }
+            },
+            "individuals": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "source": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "details",
+            "years",
+            "individuals",
+            "source"
+          ]
+        }
+      },
+      "required": [
+        "Leiden group"
+      ]
+    }
+  },
+  "required": [
+    "communities"
+  ]
+}
