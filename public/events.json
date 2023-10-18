@@ -28,9 +28,10 @@
       ],
       "author": "Simon Stevin",
       "language": "French",
+      "city": "Leiden",
       "details": [
         "A French version of \u201cDe Thiende\u201d",
-        "NPublished by the original author, in the same printing shop and the same year as the Dutch version."
+        "Published by the original author, in the same printing shop and the same year as the Dutch version."
       ],
       "sources": [
         "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
@@ -240,7 +241,10 @@
     },
     {
       "year": 1633,
-      "title": "Trigonometry in Britain",
+      "title": "Trigonometria Britannica",
+      "language": "Latin",
+      "city": "London",
+      "author": "Henry Briggs",
       "tags": [
         "logarithm",
         "trigonometry",
@@ -644,6 +648,7 @@
         "precalculus"
       ],
       "author": "Isaac Newton",
+      "language": "Latin",
       "details": [
         "A seminal work that introduced many of the foundational concepts and methods of calculus.",
         "Formalized methods for finding tangents and areas under curves",
