@@ -26,3 +26,4 @@ if __name__ == '__main__':
     validation_wrapper(functools.partial(validate_events, 'events'), 'events')
     validation_wrapper(functools.partial(validate_events, 'tags'), 'tags')
     validation_wrapper(functools.partial(validate_events, 'communities'), 'communities')
+    validation_wrapper(functools.partial(validate_events, 'tag_groups'), 'tag_groups')

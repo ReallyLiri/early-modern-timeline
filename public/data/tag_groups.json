@@ -1,0 +1,13 @@
+{
+  "groups": {
+    "event_type": {
+      "tags": [
+        "letter",
+        "publication",
+        "meeting"
+      ],
+      "unmapped": "other"
+    }
+  },
+  "unmapped": "tags"
+}
