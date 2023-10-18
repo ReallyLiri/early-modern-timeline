@@ -1,19 +1,27 @@
 import { TimelineEvent } from "../data/data";
 import {
+  Column,
   ColumnSizingState,
   createColumnHelper,
+  FilterFn,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
   getSortedRowModel,
+  Row,
   SortingState,
+  Table,
   useReactTable,
 } from "@tanstack/react-table";
 import { isArray, startCase } from "lodash";
 import styled from "styled-components";
-import { ReactNode, useState } from "react";
+import { ReactNode, useCallback, useEffect, useRef, useState } from "react";
 import { BACKGROUND_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../theme";
-import stc from "string-to-color";
+import { Anchor } from "../components/Anchor";
+import { Tag } from "../components/Tag";
+import { FlexFiller } from "../components/FlexFiller";
+import { DebouncedInput } from "../components/DebouncedInput";
+import { FilterFnOption } from "@tanstack/table-core/src/features/Filters";
 
 type EventField = keyof TimelineEvent;
 type EventFieldValue = TimelineEvent[keyof TimelineEvent];
@@ -62,8 +70,8 @@ const Container = styled.div`
   gap: 1rem;
 `;
 
-const Box = styled.div`
-  width: fit-content;
+const Box = styled.div<{ width?: number }>`
+  width: ${({ width }) => (width ? `calc(${width}px - 2rem)` : "fit-content")};
   border: 2px solid ${SECONDARY_COLOR};
   padding: 1rem;
   display: flex;
@@ -74,6 +82,18 @@ const Box = styled.div`
 `;
 
 const StyledTable = styled.table`
+  border-collapse: collapse;
+
+  tbody {
+    tr {
+      border-bottom: 1px solid ${BACKGROUND_COLOR};
+    }
+
+    td {
+      padding: 0.25rem 0;
+    }
+  }
+
   .resizer {
     height: 100%;
     width: 4px;
@@ -84,43 +104,25 @@ const StyledTable = styled.table`
   }
 
   .resizer.isResizing {
-    background: ${MAIN_COLOR}};
+    background: ${MAIN_COLOR}
+  }
+;
+  opacity: 1;
+}
+
+@media (hover: hover) {
+  .resizer {
+    opacity: 0;
+  }
+
+  *:hover > .resizer {
     opacity: 1;
   }
-
-  @media (hover: hover) {
-    .resizer {
-      opacity: 0;
-    }
-
-    *:hover > .resizer {
-      opacity: 1;
-    }
-  }
+}
 `;
 
-const THead = styled.thead`
-  background-color: ${BACKGROUND_COLOR};
-
-  th {
-  }
-`;
-
-const Anchor = ({ url }: { url: string }) => {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noreferrer"
-      style={{ cursor: "pointer" }}
-    >
-      {url}
-    </a>
-  );
-};
-
-const InlineList = styled.div<{gap?: number}>`
-  gap: ${({gap}) => gap || 0.25}rem;
+const InlineList = styled.div<{ gap?: number }>`
+  gap: ${({ gap }) => gap || 0.25}rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -131,35 +133,23 @@ const SourcesSeparator = styled.span`
   user-select: none;
 `;
 
-const TagCircle = styled.div<{ tag: string }>`
-  display: inline-block;
-  height: 0.5rem;
-  width: 0.5rem;
-  border-radius: 50%;
-  margin-bottom: 2px;
-  background-color: ${({ tag }) => stc(tag)};
-`;
-
-const Tag = ({ tag }: { tag: string }) => {
-  return (
-    <span>
-      <TagCircle tag={tag} /> {startCase(tag)}
-    </span>
-  );
-};
-
 const HeaderCell = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 4px;
-  padding: 0.25rem 0;
+  padding: 0.25rem;
   border-bottom: 2px solid ${SECONDARY_COLOR};
-`
+  background-color: ${BACKGROUND_COLOR};
+`;
 
-const FlexFiller = styled.div`
-  flex: 1; 
-`
+const StyledInput = styled(DebouncedInput)`
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  padding: 0.5rem;
+`;
 
 const renderCell = (field: EventField, value: EventFieldValue): ReactNode => {
   if (!value) {
@@ -195,7 +185,7 @@ const renderCell = (field: EventField, value: EventFieldValue): ReactNode => {
   return startCase(value.toString());
 };
 
-export const Table = ({ events }: Props) => {
+export const TimelineTable = ({ events }: Props) => {
   const [columnVisibility, setColumnVisibility] = useState(
     defaultVisibleColumns as Partial<Record<EventField, boolean>>,
   );
@@ -206,10 +196,13 @@ export const Table = ({ events }: Props) => {
     })),
   );
   const [columnSizing, setColumnSizing] = useState<ColumnSizingState>({});
+  const [globalFilter, setGlobalFilter] = useState("");
+  const visibilityBoxRef = useRef<HTMLDivElement>(null);
 
-  const table = useReactTable({
+  const table: Table<TimelineEvent> = useReactTable({
     data: events,
     columns,
+    getColumnCanGlobalFilter: () => true,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
@@ -217,6 +210,7 @@ export const Table = ({ events }: Props) => {
       columnVisibility,
       sorting: columnSorting,
       columnSizing,
+      globalFilter,
     },
     onColumnVisibilityChange: setColumnVisibility,
     onSortingChange: setColumnSorting,
@@ -229,14 +223,12 @@ export const Table = ({ events }: Props) => {
           info.getValue() as EventFieldValue,
         ),
       header: (info) => startCase(info.column.id),
-      enableHiding: true,
-      enableResizing: true,
-      enableSorting: true,
     },
   });
+
   return (
     <Container>
-      <Box>
+      <Box ref={visibilityBoxRef}>
         {table.getAllLeafColumns().map((column) => {
           return (
             <div key={column.id}>
@@ -252,47 +244,54 @@ export const Table = ({ events }: Props) => {
           );
         })}
       </Box>
+      <Box width={visibilityBoxRef.current?.clientWidth}>
+        <StyledInput
+          value={globalFilter ?? ""}
+          onChange={(value) => setGlobalFilter(String(value))}
+          placeholder="Search all columns..."
+        />
+      </Box>
       <StyledTable>
-        <THead>
+        <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>
               {headerGroup.headers.map((header) => (
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
-                  style={
-                    {
-                      width: header.getSize(),
-                      ...(header.column.getCanSort() ? { cursor: "pointer" } : {})
-                    }
-                  }
+                  style={{
+                    width: header.getSize(),
+                    ...(header.column.getCanSort()
+                      ? { cursor: "pointer" }
+                      : {}),
+                  }}
                 >
                   <HeaderCell>
                     {flexRender(
-                        header.column.columnDef.header,
-                        header.getContext(),
+                      header.column.columnDef.header,
+                      header.getContext(),
                     )}
                     {{
                       asc: " ⬆",
                       desc: " ⬇",
                     }[header.column.getIsSorted() as string] ?? null}
-                    <FlexFiller/>
+                    <FlexFiller />
                     <div
-                        {...{
-                          onMouseDown: header.getResizeHandler(),
-                          onTouchStart: header.getResizeHandler(),
-                          className: `resizer ${
-                              header.column.getIsResizing() ? 'isResizing' : ''
-                          }`,
-                          style: {height: 32},
-                        }}
+                      {...{
+                        onMouseDown: header.getResizeHandler(),
+                        onTouchStart: header.getResizeHandler(),
+                        className: `resizer ${
+                          header.column.getIsResizing() ? "isResizing" : ""
+                        }`,
+                        style: { height: 32 },
+                      }}
                     />
                   </HeaderCell>
                 </th>
               ))}
             </tr>
           ))}
-        </THead>
+        </thead>
         <tbody>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>

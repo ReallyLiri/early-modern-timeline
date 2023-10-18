@@ -1,10 +1,10 @@
 import React, { useMemo, useRef } from "react";
 import styled from "styled-components";
-import { Transformable } from "./Transformable";
 import { BACKGROUND_COLOR, MAIN_COLOR } from "../theme";
 import { useHover } from "usehooks-ts";
 import { TimelineEvent } from "../data/data";
 import { sortedUniq } from "lodash";
+import { Transformable } from "../components/Transformable";
 
 type Props = {
   events: TimelineEvent[];
