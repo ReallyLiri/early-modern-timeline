@@ -1,10 +1,9 @@
 import { TimelineEvent } from "./TimelineEvent";
 
-type Data = {
+type TimelineEvents = {
   events: TimelineEvent[];
-  tags: any[]; // TODO
 };
 
-export const fetchDataAsync = async () => {
-  return (await (await fetch("/events.json")).json()) as Data;
+export const fetchEventsAsync = async () => {
+  return (await (await fetch("/events.json")).json()) as TimelineEvents;
 };

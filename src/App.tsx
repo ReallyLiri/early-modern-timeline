@@ -1,7 +1,7 @@
 import { Timeline, TimelineNode } from "./components/Timeline";
 import { useEffect, useMemo, useState } from "react";
 import { TimelineEvent } from "./data/TimelineEvent";
-import { fetchDataAsync } from "./data/data";
+import { fetchEventsAsync } from "./data/data";
 import { sortedUniq } from "lodash";
 import styled from "styled-components";
 
@@ -23,7 +23,7 @@ function App() {
   const [filteredEvents, setFilteredEvents] = useState<TimelineEvent[]>([]);
 
   useEffect(() => {
-    fetchDataAsync().then((data) => setEvents(data.events));
+    fetchEventsAsync().then((data) => setEvents(data.events));
   }, []);
 
   useEffect(() => {

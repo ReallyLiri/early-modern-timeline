@@ -17,8 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "schema-gen": "scripts/json2ts.sh"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +39,7 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.14.199",
+    "json-schema-to-typescript": "^13.1.1",
     "prettier": "^3.0.3"
   }
 }
