@@ -108,7 +108,8 @@
       "year": 1616,
       "title": "Briggs met Napier",
       "tags": [
-        "logarithm"
+        "logarithm",
+        "meeting"
       ],
       "details": [
         "Briggs met Napier in Edinburgh.",
@@ -124,7 +125,8 @@
       "year": 1617,
       "title": "Briggs met Napier again",
       "tags": [
-        "logarithm"
+        "logarithm",
+        "meeting"
       ],
       "details": [
         "Briggs met Napier in Edinburgh for the second time.",
@@ -661,6 +663,70 @@
       ]
     },
     {
+      "year": 1687,
+      "title": "Philosophiae Naturalis Principia Mathematica",
+      "tags": [
+        "publication",
+        "curves",
+        "precalculus"
+      ],
+      "author": "Isaac Newton",
+      "language": "Latin",
+      "city": "London",
+      "details": []
+    },
+    {
+      "year": 1672,
+      "title": "Leibniz met Huygens and studied under him",
+      "tags": [
+        "meeting"
+      ],
+      "individuals": [
+        "Christiaan Huygens",
+        "Gottfried Wilhelm Leibniz"
+      ],
+      "city": "Paris",
+      "details": [
+        "Huygens tutored Leibniz until 1676 and they kept corresponding."
+      ],
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Leibniz/",
+        "https://www.britannica.com/science/mathematics/Newton-and-Leibniz"
+      ]
+    },
+    {
+      "year": 1676,
+      "title": "Leibniz corresponded with Ozanam",
+      "tags": [
+        "letter"
+      ],
+      "individuals": [
+        "Jacques Ozanam",
+        "Gottfried Wilhelm Leibniz"
+      ],
+      "details": [],
+      "sources": [
+        "Strickland, 2023"
+      ]
+    },
+    {
+      "year": 1684,
+      "title": "Nova Methodus pro Maximis et Minimis",
+      "tags": [
+        "publication",
+        "curves",
+        "precalculus"
+      ],
+      "author": "Gottfried Wilhelm Leibniz",
+      "language": "Latin",
+      "city": "Leipzig",
+      "details": [
+      ],
+      "sources": [
+        "https://www.britannica.com/science/mathematics/Newton-and-Leibniz"
+      ]
+    },
+    {
       "year": 1736,
       "title": "De Methodis Serierum et Fluxionum",
       "tags": [
@@ -675,6 +741,54 @@
         "Newton's work was published, 65 years after it was written."
       ],
       "sources": []
+    },
+    {
+      "year": 1605,
+      "title": "Advancement of Learning",
+      "tags": [
+        "publication",
+        "education",
+        "instrument",
+        "mysticism"
+      ],
+      "author": "Francis Bacon",
+      "language": "English",
+      "city": "London",
+      "details": [
+        "Proposes to strengthen the emphasis on philosophy and natural knowledge to address defects crippling contemporary education.",
+        "Propose creating university positions devoted to artes and sciences at large, rather than to specific profession.",
+        "Argues that the teaching of sciences should involve technical education. Suggests to use instruments anf experiments."
+      ],
+      "sources": [
+        "Popper, N. (2006). “Abraham, Planter of Mathematics”: Histories of Mathematics and Astrology in Early Modern Europe. Journal of the History of Ideas, 67(1), 87–106."
+      ]
+    },
+    {
+      "year": 1487,
+      "title": "Pico planned a public disputation of his 900 theses",
+      "tags": [],
+      "details": [
+        "Pico argued that all philosophical and theological schools, including the Christianity, Kabbalah, Islam, etc., originated from the same source, and exemplify the same truth.",
+        "Exemplifies the Renaissance interest in the unity of knowledge and synthesis of different traditions.",
+        "The disputation was cancelled by Pope Innocent VIII."
+      ]
+    },
+    {
+      "year": 1496,
+      "title": "Pico composed Oratio de hominis dignitate",
+      "tags": [
+        "publication"
+      ],
+      "author": "Giovanni Pico della Mirandola",
+      "language": "Latin",
+      "city": "Florence",
+      "details": [
+        "Revers freedom and capacity to know and to dominate reality.",
+        "Considered the \"Manifesto of the Renaissance.\""
+      ],
+      "sources": [
+        "https://www.brown.edu/Departments/Italian_Studies/pico/presentaz/eng.html"
+      ]
     }
   ]
 }
