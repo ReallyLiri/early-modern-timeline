@@ -147,7 +147,7 @@ const nodeTitle = (events: TimelineEvent[]) => {
   return `${events[0].title} +${events.length - 1} more...`;
 };
 
-export const Timeline = ({ events }: Props) => {
+export const TimelineLine = ({ events }: Props) => {
     const rerender = React.useReducer(() => ({}), {})[1]
 
     const eventsByYear: Record<number, TimelineEvent[]> = useMemo(

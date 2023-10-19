@@ -1,9 +1,9 @@
-import { Timeline } from "./pages/Timeline";
+import { TimelineLine } from "./pages/TimelineLine";
 import React, { useEffect, useState } from "react";
 import { fetchEventsAsync, TimelineEvent } from "./data/data";
 import styled from "styled-components";
 import { Tabs } from "./components/Tabs";
-import { TimelineTable } from "./pages/Table";
+import { TimelineTable } from "./pages/TimelineTable";
 
 const Title = styled.div`
   margin: 2rem 0;
@@ -25,7 +25,7 @@ function App() {
       <Title>🗓️ Early Modern Timeline 📅</Title>
       <Tabs titles={["Table", "Timeline"]}>
           <TimelineTable events={events} />
-          <Timeline events={events} />
+          <TimelineLine events={events} />
       </Tabs>
     </>
   );
