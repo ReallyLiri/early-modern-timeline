@@ -1,12 +1,10 @@
-import argparse
 import json
 from dataclasses import dataclass
 
 import click
 from tabulate import tabulate
 
-
-json_file = '/public/data/events.json'
+json_file = '/Users/mia/dev/personal/early-modern-timeline/public/data/events.json'
 
 
 @dataclass
@@ -99,10 +97,13 @@ def to_table_row(event: dict) -> list:
 def show_all_tags():
     data = read_json()
     events = data.get('events', [])
-    tags_to_show = set()
+    tags_count = {}
     for event in events:
-        tags_to_show.update(event.get('tags', []))
-    print('\n'.join(sorted(tags_to_show)))
+        for tag in event.get('tags', []):
+            tags_count[tag] = tags_count.get(tag, 0) + 1
+    sorted_tags = sorted(tags_count.items(), key=lambda x: x[1], reverse=True)
+    for tag, count in sorted_tags:
+        print(f"{tag}: {count}")
 
 
 @click.group()
