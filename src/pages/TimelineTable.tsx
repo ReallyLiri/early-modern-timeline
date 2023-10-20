@@ -9,7 +9,7 @@ import {
   useReactTable,
   VisibilityState,
 } from "@tanstack/react-table";
-import { isEmpty, sortedUniq, startCase } from "lodash";
+import { isEmpty, startCase } from "lodash";
 import styled from "styled-components";
 import { useEffect, useMemo, useState } from "react";
 import { renderCell, TableComponent } from "../components/TableComponent";
@@ -36,6 +36,11 @@ const Container = styled.div`
   gap: 1rem;
 `;
 
+const RowsCount = styled.div`
+  width: calc(100% - 1rem);
+  text-align: end;
+`;
+
 const filterEvents = (
   events: TimelineEvent[],
   visibility: VisibilityState,
@@ -59,14 +64,17 @@ const filterEvents = (
     }
 
     if (ev.year < yearsRange[0] || ev.year > yearsRange[1]) {
-      return false
+      return false;
     }
 
-    if (selectedTags.length > 0 && !selectedTags.some(tag => ev.tags.includes(tag))) {
-      return false
+    if (
+      selectedTags.length > 0 &&
+      !selectedTags.some((tag) => ev.tags.includes(tag))
+    ) {
+      return false;
     }
 
-    return true
+    return true;
   });
 };
 
@@ -93,8 +101,17 @@ export const TimelineTable = ({ events }: Props) => {
     [events],
   );
   const [yearsRange, setYearsRange] = useState<[number, number]>([0, 0]);
-  const tags = useMemo(() => sortedUniq(events.flatMap(e => e.tags).sort()), [events])
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const tagsWithCount = useMemo(
+    () =>
+      events.reduce((acc, ev) => {
+        ev.tags.forEach((tag) => {
+          acc[tag] = (acc[tag] || 0) + 1;
+        });
+        return acc;
+      }, {} as Record<string, number>),
+    [events],
+  );
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {
     setYearsRange([minYear, maxYear]);
@@ -108,10 +125,17 @@ export const TimelineTable = ({ events }: Props) => {
         globalFilter,
         globalFilterVisibleOnly,
         yearsRange,
-          selectedTags,
+        selectedTags,
       ),
     );
-  }, [columnVisibility, events, globalFilter, globalFilterVisibleOnly, selectedTags, yearsRange]);
+  }, [
+    columnVisibility,
+    events,
+    globalFilter,
+    globalFilterVisibleOnly,
+    selectedTags,
+    yearsRange,
+  ]);
 
   const table: Table<TimelineEvent> = useReactTable({
     data: filteredEvents,
@@ -154,11 +178,18 @@ export const TimelineTable = ({ events }: Props) => {
         maxYear={maxYear}
         visibilityState={columnVisibility}
         setVisibilityState={setColumnVisibility}
-        tags={tags}
+        tagsWithCount={tagsWithCount}
         selectedTags={selectedTags}
         setSelectedTags={setSelectedTags}
       />
-      {Object.values(columnVisibility).every((v) => !v) && <div>No columns selected :(</div>}
+      {Object.values(columnVisibility).every((v) => !v) ? (
+        <div>No columns selected :(</div>
+      ) : (
+        <RowsCount>
+          {filteredEvents.length} records
+          {filteredEvents.length < events.length && ` (${events.length} total)`}
+        </RowsCount>
+      )}
       <TableComponent table={table} />
     </Container>
   );

@@ -140,6 +140,12 @@ const RefreshButton = styled.div`
   cursor: pointer;
 `;
 
+const ConstructionWarning = styled.div`
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+`;
+
 const nodeTitle = (events: TimelineEvent[]) => {
   if (events.length === 1) {
     return events[0].title;
@@ -148,9 +154,9 @@ const nodeTitle = (events: TimelineEvent[]) => {
 };
 
 export const TimelineLine = ({ events }: Props) => {
-    const rerender = React.useReducer(() => ({}), {})[1]
+  const rerender = React.useReducer(() => ({}), {})[1];
 
-    const eventsByYear: Record<number, TimelineEvent[]> = useMemo(
+  const eventsByYear: Record<number, TimelineEvent[]> = useMemo(
     () =>
       events.reduce(
         (acc, event) => {
@@ -181,7 +187,10 @@ export const TimelineLine = ({ events }: Props) => {
 
   return (
     <>
-      <RefreshButton onClick={() => rerender()} title="Web is hard">Re-Render</RefreshButton>
+      <RefreshButton onClick={() => rerender()} title="Web is hard">
+        Re-Render
+      </RefreshButton>
+      <ConstructionWarning>🚧 Under construction 🚧</ConstructionWarning>
       <Container>
         <HorizontalLine />
         <Row>

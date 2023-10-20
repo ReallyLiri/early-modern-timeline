@@ -1,6 +1,6 @@
 import { flexRender, Table } from "@tanstack/react-table";
 import { FlexFiller } from "./FlexFiller";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BACKGROUND_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../theme";
 import { TimelineEvent } from "../data/data";
 import { isArray, startCase } from "lodash";
@@ -15,6 +15,7 @@ type Props = {
 
 const StyledTable = styled.table`
   border-collapse: collapse;
+  border-spacing: 20px 0;
 
   tbody {
     tr {
@@ -22,7 +23,7 @@ const StyledTable = styled.table`
     }
 
     td {
-      padding: 0.25rem 0;
+      padding: 0.25rem;
     }
   }
 
@@ -75,6 +76,20 @@ const SourcesSeparator = styled.span`
   user-select: none;
 `;
 
+const Paragraph = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+const TableRow = styled.tr<{ publication: boolean }>`
+  ${({ publication }) =>
+    publication &&
+    css`
+      background-color: #f1f1f1;
+    `};
+`;
+
 export const renderCell = (
   field: EventField,
   value: EventFieldValue,
@@ -84,7 +99,13 @@ export const renderCell = (
   }
   if (isArray(value)) {
     if (field === "details") {
-      return value.map((v) => <div>{v}</div>);
+      return (
+        <Paragraph>
+          {value.map((v) => (
+            <div>{v}</div>
+          ))}
+        </Paragraph>
+      );
     }
     if (field === "sources") {
       return (
@@ -109,61 +130,62 @@ export const renderCell = (
     }
     return value.map((v) => startCase(v)).join(", ");
   }
+  if (field === "title") {
+    return value;
+  }
   return startCase(value.toString());
 };
 
-export const TableComponent = ({ table }: Props) => {
-  return (
-    <StyledTable>
-      <thead>
-        {table.getHeaderGroups().map((headerGroup) => (
-          <tr key={headerGroup.id}>
-            {headerGroup.headers.map((header) => (
-              <th
-                key={header.id}
-                onClick={header.column.getToggleSortingHandler()}
-                style={{
-                  width: header.getSize(),
-                  ...(header.column.getCanSort() ? { cursor: "pointer" } : {}),
-                }}
-              >
-                <HeaderCell>
-                  {flexRender(
-                    header.column.columnDef.header,
-                    header.getContext(),
-                  )}
-                  {{
-                    asc: " ⬆",
-                    desc: " ⬇",
-                  }[header.column.getIsSorted() as string] ?? null}
-                  <FlexFiller />
-                  <div
-                    {...{
-                      onMouseDown: header.getResizeHandler(),
-                      onTouchStart: header.getResizeHandler(),
-                      className: `resizer ${
-                        header.column.getIsResizing() ? "isResizing" : ""
-                      }`,
-                      style: { height: 32 },
-                    }}
-                  />
-                </HeaderCell>
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody>
-        {table.getRowModel().rows.map((row) => (
-          <tr key={row.id}>
-            {row.getVisibleCells().map((cell) => (
-              <td key={cell.id}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </StyledTable>
-  );
-};
+export const TableComponent = ({ table }: Props) => (
+  <StyledTable>
+    <thead>
+      {table.getHeaderGroups().map((headerGroup) => (
+        <tr key={headerGroup.id}>
+          {headerGroup.headers.map((header) => (
+            <th
+              key={header.id}
+              onClick={header.column.getToggleSortingHandler()}
+              style={{
+                width: header.getSize(),
+                ...(header.column.getCanSort() ? { cursor: "pointer" } : {}),
+              }}
+            >
+              <HeaderCell>
+                {flexRender(
+                  header.column.columnDef.header,
+                  header.getContext(),
+                )}
+                {{
+                  asc: " ⬆",
+                  desc: " ⬇",
+                }[header.column.getIsSorted() as string] ?? " ·"}
+                <FlexFiller />
+                <div
+                  {...{
+                    onMouseDown: header.getResizeHandler(),
+                    onTouchStart: header.getResizeHandler(),
+                    className: `resizer ${
+                      header.column.getIsResizing() ? "isResizing" : ""
+                    }`,
+                    style: { height: 32 },
+                  }}
+                />
+              </HeaderCell>
+            </th>
+          ))}
+        </tr>
+      ))}
+    </thead>
+    <tbody>
+      {table.getRowModel().rows.map((row) => (
+        <TableRow key={row.id} publication={row.original.publication}>
+          {row.getVisibleCells().map((cell) => (
+            <td key={cell.id}>
+              {flexRender(cell.column.columnDef.cell, cell.getContext())}
+            </td>
+          ))}
+        </TableRow>
+      ))}
+    </tbody>
+  </StyledTable>
+);

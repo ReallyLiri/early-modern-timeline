@@ -11,10 +11,11 @@ const TagCircle = styled.div<{ tag: string }>`
   background-color: ${({ tag }) => stc(tag)};
 `;
 
-export const Tag = ({ tag }: { tag: string }) => {
-    return (
-        <span>
+export const Tag = ({ tag, count }: { tag: string; count?: number }) => {
+  return (
+    <span>
       <TagCircle tag={tag} /> {startCase(tag)}
+      {count && ` (${count})`}
     </span>
-    );
+  );
 };

@@ -11,28 +11,29 @@ const columnHelper = createColumnHelper<TimelineEvent>();
 export const columns = [
     columnHelper.accessor("year", { sortingFn: "alphanumeric" }),
     columnHelper.accessor("title", {}),
-    columnHelper.accessor("tags", { enableSorting: false }),
     columnHelper.accessor("author", {}),
     columnHelper.accessor("language", {}),
-    columnHelper.accessor("details", {}),
-    columnHelper.accessor("sources", { enableSorting: false }),
     columnHelper.accessor("city", {}),
     columnHelper.accessor("individuals", { enableSorting: false }),
-];
+    columnHelper.accessor("tags", { enableSorting: false }),
+    columnHelper.accessor("details", {}),
+    columnHelper.accessor("sources", { enableSorting: false }),
+    ];
 
 export const defaultVisibleColumns: Record<EventField, boolean> = {
     year: true,
-    author: true,
+    title: true,
     tags: true,
+    details: true,
 
-    details: false,
+    author: false,
     sources: false,
-    title: false,
     language: false,
     city: false,
     individuals: false,
+    publication: false,
 };
 
 export const defaultSorting: Partial<Record<EventField, "desc" | "asc">> = {
-    year: "desc",
+    year: "asc",
 };

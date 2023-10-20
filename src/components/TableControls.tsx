@@ -1,8 +1,8 @@
 import { startCase } from "lodash";
-import { BACKGROUND_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../theme";
-import styled, { css } from "styled-components";
+import { BACKGROUND_COLOR, SECONDARY_COLOR } from "../theme";
+import styled from "styled-components";
 import { DebouncedInput } from "./DebouncedInput";
-import { Dispatch, SetStateAction, useMemo, useState } from "react";
+import { Dispatch, SetStateAction, useMemo } from "react";
 import { Table, VisibilityState } from "@tanstack/react-table";
 import { TimelineEvent } from "../data/data";
 import Select from "react-select";
@@ -21,13 +21,14 @@ type Props = {
   maxYear: number;
   visibilityState: VisibilityState;
   setVisibilityState: Dispatch<SetStateAction<VisibilityState>>;
-  tags: string[];
+  tagsWithCount: Record<string, number>;
   selectedTags: string[];
   setSelectedTags: Dispatch<SetStateAction<string[]>>;
 };
 
-const Box = styled.div<{width: number}>`
-  width: ${({width}) => width}px;
+const Box = styled.div<{ width: number }>`
+  width: ${({ width }) => width}px;
+  max-width: 1024px;
   border: 2px solid ${SECONDARY_COLOR};
   padding: 1rem;
   display: flex;
@@ -36,7 +37,7 @@ const Box = styled.div<{width: number}>`
   border-radius: 1rem;
   background-color: ${BACKGROUND_COLOR};
   align-items: center;
-  
+
   .select {
     width: 100%;
   }
@@ -71,34 +72,11 @@ const Controls = styled.div`
   width: 100%;
 `;
 
-const ControlsRows = styled.div<{ collapsed: boolean }>`
-  ${({ collapsed }) =>
-    collapsed &&
-    css`
-      height: 0;
-      opacity: 0;
-    `};
+const ControlsRows = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 `;
-
-const CollapseButton = styled.div<{ collapse: boolean }>`
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  cursor: pointer;
-  width: fit-content;
-  background-color: ${BACKGROUND_COLOR};
-  color: ${MAIN_COLOR};
-  border-radius: 1rem;
-  padding: 1rem;
-  font-size: 2rem;
-  border: 2px solid ${SECONDARY_COLOR};
-  margin-left: 2rem;
-  transform: rotate(${({ collapse }) => (collapse ? 90 : -90)}deg);
-`;
-
 
 export const TableControls = ({
   table,
@@ -110,27 +88,42 @@ export const TableControls = ({
   setYearsRange,
   minYear,
   maxYear,
-    visibilityState,
-    setVisibilityState,
-    tags,
-    selectedTags,
-    setSelectedTags,
+  visibilityState,
+  setVisibilityState,
+  tagsWithCount,
+  selectedTags,
+  setSelectedTags,
 }: Props) => {
-  const {width} = useWindowSize()
-  const boxWidth = width * 0.75
-  const [controlsCollapsed, setControlsCollapsed] = useState<boolean>(false);
+  const { width } = useWindowSize();
+  const boxWidth = width * 0.9;
   const columnOptions = useMemo(
     () =>
-      table
-        .getAllLeafColumns()
-        .map((column) => ({ value: column.id, label: startCase(column.id), onChange: column.getToggleVisibilityHandler() })),
+      table.getAllLeafColumns().map((column) => ({
+        value: column.id,
+        label: startCase(column.id),
+        onChange: column.getToggleVisibilityHandler(),
+      })),
     [table],
   );
-  const tagOptions = useMemo(() => tags.map((tag) => ({ value: tag, label: <Tag tag={tag}/> })), [tags]);
+  const tags = useMemo(
+    () =>
+      Object.keys(tagsWithCount).sort(
+        (a, b) => tagsWithCount[b] - tagsWithCount[a] || a.localeCompare(b),
+      ),
+    [tagsWithCount],
+  );
+  const tagOptions = useMemo(
+    () =>
+      tags.map((tag) => ({
+        value: tag,
+        label: <Tag tag={tag} count={tagsWithCount[tag]} />,
+      })),
+    [tags, tagsWithCount],
+  );
 
   return (
     <Controls>
-      <ControlsRows collapsed={controlsCollapsed}>
+      <ControlsRows>
         <Box width={boxWidth}>
           <Label>Columns</Label>
           <Select
@@ -172,7 +165,7 @@ export const TableControls = ({
             } columns...`}
           />
           <VisibleOnlyCheckbox>
-            <span>Visible only:</span>
+            <span>Search only in visible columns:</span>
             <input
               type="checkbox"
               checked={globalFilterVisibleOnly}
@@ -199,13 +192,6 @@ export const TableControls = ({
           />
         </Box>
       </ControlsRows>
-      <CollapseButton
-        title={`${controlsCollapsed ? "Expand" : "Collapse"} controls`}
-        collapse={controlsCollapsed}
-        onClick={() => setControlsCollapsed((b) => !b)}
-      >
-        ➤
-      </CollapseButton>
     </Controls>
   );
 };

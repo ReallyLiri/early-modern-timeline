@@ -22,8 +22,8 @@ function App() {
 
   return (
     <>
-      <Title>🗓️ Early Modern Timeline 📅</Title>
-      <Tabs titles={["Table", "Timeline"]}>
+      <Title>🗓️ Divide and Archive 📅</Title>
+      <Tabs titles={["Records", "Timeline"]}>
           <TimelineTable events={events} />
           <TimelineLine events={events} />
       </Tabs>
