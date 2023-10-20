@@ -364,7 +364,8 @@
         "curves",
         "analytic_geometry",
         "construction",
-        "precaculus"
+        "precalculus",
+        "homogeneity"
       ],
       "author": "Ren\u00e9 Descartes",
       "language": "French",
@@ -748,7 +749,7 @@
       "tags": [
         "publication",
         "education",
-        "instrument",
+        "instruments",
         "mysticism"
       ],
       "author": "Francis Bacon",
@@ -788,6 +789,301 @@
       ],
       "sources": [
         "https://www.brown.edu/Departments/Italian_Studies/pico/presentaz/eng.html"
+      ]
+    },
+    {
+      "year": 1544,
+      "title": "Ramus was banned from teaching philosophy",
+      "tags": [
+        "education",
+        "religion"
+      ],
+      "individuals": [
+        "Petrus Ramus"
+      ],
+      "details": [
+        "According to Goulding (2006), Ramus's attacks on Aristotle and modern logic provoked his politically influential opponents, and he was banned by the royal order.",
+        "According to Goulding (2006), this caused Ramus to focus on mathematics."
+      ],
+      "sources": [
+        "Goulding, R. (2006). Method and Mathematics: Peter Ramus’s Histories of the Sciences. Journal of the History of Ideas, 67(1), 63–85."
+      ]
+    },
+    {
+      "year": 1572,
+      "Title": "St. Bartholomew's Day massacre",
+      "tags": [
+        "religion"
+      ],
+      "details": [
+        "French Catholics targeted and killed thousands of Huguenots, French Protestants, in Paris and other parts of France.",
+        "Peter Ramus was killed in the massacre."
+      ]
+    },
+    {
+      "year": 1544,
+      "title": "Oratio de studiis mathematiciis",
+      "tags": [
+        "publication",
+        "education",
+        "antiquity"
+      ],
+      "author": "Petrus Ramus",
+      "language": "Latin",
+      "city": "Paris",
+      "details": [
+        "Few pages long oratio, part of a book that includes 3 other orations.",
+        "Expresses the highest appreciation for mathematics, as it was used by Archimedes for practice and by Plato for contemplation."
+      ],
+      "sources": [
+        "https://books.google.co.il/books?id=j3XOsT99JXUC",
+        "Strazzoni, A. (2017). Ramism. In M. Sgarbi (Ed.), Encyclopedia of Renaissance Philosophy (pp. 1–16). Springer International Publishing. https://doi.org/10.1007/978-3-319-02848-4_683-1"
+      ]
+    },
+    {
+      "year": 1555,
+      "title": "Arithmetica",
+      "tags": [
+        "publication"
+      ],
+      "author": "Petrus Ramus",
+      "language": "Latin",
+      "city": "Paris",
+      "details": [
+        "Ramus changes his previously attitude towards mathematics, no longer viewing it as the most natual and well organized art.",
+        "Argues that Euclid violated his two of the laws of method, since he broke the law of justice/homogeneity by mixing geometry and arithmetic, and the law of wisdom, since he started with geometry, whereas the treatment of quantity (in arithmetic) has to come first.",
+        "Calls for reorganization of mathematics, which will make the demonstration, which he viewed as mere explanations, unnecessary, because the truth will be evident."
+      ],
+      "sources": [
+        "Strazzoni, A. (2017). Ramism. In M. Sgarbi (Ed.), Encyclopedia of Renaissance Philosophy (pp. 1–16). Springer International Publishing. https://doi.org/10.1007/978-3-319-02848-4_683-1",
+        "Goulding, R. (2006). Method and Mathematics: Peter Ramus’s Histories of the Sciences. Journal of the History of Ideas, 67(1), 63–85."
+      ]
+    },
+    {
+      "year": 1569,
+      "title": "Scholae mathematicae",
+      "tags": [
+        "publication",
+        "practical_mathematics",
+        "religion",
+        "antiquity"
+      ],
+      "author": "Petrus Ramus",
+      "language": "Latin",
+      "details": [
+        "Criticizes Plato for making mathematics too abstract and compares him to the selfish Christian theologian who usurped the study of God from the common people.",
+        "Criticizes ancient mathematics for not applying mathematics to practical disciplines.",
+        "Includes an extended history of mathematics, starting with the first man - Adam.",
+        "Links Germany's success in mining and fortification (and the wealth of its princes) with it's mathematical education."
+      ],
+      "sources": [
+        "Strazzoni, A. (2017). Ramism. In M. Sgarbi (Ed.), Encyclopedia of Renaissance Philosophy (pp. 1–16). Springer International Publishing. https://doi.org/10.1007/978-3-319-02848-4_683-1",
+        "Goulding, R. (2006). Method and Mathematics: Peter Ramus’s Histories of the Sciences. Journal of the History of Ideas, 67(1), 63–85.",
+        "Popper, N. (2006). “Abraham, Planter of Mathematics”: Histories of Mathematics and Astrology in Early Modern Europe. Journal of the History of Ideas, 67(1), 87–106.",
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
+      ]
+    },
+    {
+      "year": 1551,
+      "title": "Pathwaie to Knowledge",
+      "tags": [
+        "publication",
+        "education",
+        "instruments"
+      ],
+      "author": "Robert Recorde",
+      "language": "English",
+      "city": "London",
+      "details": [
+        "No proofs are given in this book but instead Recorde explains why the theorems are true and gives examples to aid a student to understand not only what was being taught, but also why it was being taught.",
+        "From the preface: \"Carpenters, Karvers, Joyners and masons doo willingly acknowledge that they can worke nothyng without reason of geometrie\"",
+        "States that the necessary instruments for many practices, like sailing the sea, were founded by geometers."
+      ],
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
+      ]
+    },
+    {
+      "year": 1558,
+      "title": "Arithmetica e geometria",
+      "tags": [
+        "publication",
+        "practical_mathematics"
+      ],
+      "author": "Giovanni Francesco Peverone",
+      "language": "Italian",
+      "city": "Lyon",
+      "details": [
+        "Includes surveying techniques as part of the discussion of geometry."
+      ],
+      "sources": [
+        "https://maa.org/press/periodicals/convergence/mathematical-treasure-peverones-arithmetic-and-geometry"
+      ]
+    },
+    {
+      "year": 1532,
+      "title": "Protomathesis",
+      "tags": [
+        "publication",
+        "practical_mathematics",
+        "instruments"
+      ],
+      "author": "Oronce Fine",
+      "language": "Latin",
+      "city": "Paris",
+      "details": [
+        "Compendium of mathematics consisting of writings on arithmetic, geometry, trigonometry, astronomy, and instrument-making.",
+        "Includes examples of the use of mathematics in practical applications, such as the use of a quadrant in determining the inaccessible depth of a well.",
+        "Quate (translated by Keller, 1985): \"you will not be able to understand the proper causes of things unless you establish the numbers, and are at the same time a geometer\"."
+      ],
+      "sources": [
+        "https://maa.org/press/periodicals/convergence/mathematical-treasure-oronce-fines-emprotomathesisem"
+      ]
+    },
+    {
+      "year": 1500,
+      "title": "Cannons become a decisive instrument of war",
+      "tags": [
+        "instruments",
+        "fortifications",
+        "practical_mathematics"
+      ],
+      "details": [
+        "According to Keller (1985), around 1500 cannons has reached sufficient efficiency and mobility to become a decisive instrument of war.",
+        "According to Keller (1985), this led to a change in the old war style, development of fortifications and the need for mathematical knowledge to design them."
+      ],
+      "sources": [
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
+      ]
+    },
+    {
+      "year": 1533,
+      "title": "Libellus de Locorum describendorum ratione",
+      "tags": [
+        "publication",
+        "practical_mathematics",
+        "instruments"
+      ],
+      "author": "Gemma Frisius",
+      "language": "Latin",
+      "details": [
+        "Suggested the use of triangulation for map making.",
+        "This is a pamphlet that was presented as the Appendix to the 1533 edition of the Cosmographica of Peter Apian."
+      ],
+      "sources": [
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
+      ]
+    },
+    {
+      "year": 1571,
+      "title": "Theatrum Instrumentorum",
+      "tags": [
+        "publication",
+        "instruments"
+      ],
+      "author": "Jacques Besson",
+      "language": "Latin",
+      "details": [
+        "Include designs of multiple inventions and instruments.",
+        "The book was published in a rash, probably due to the political situation that forced Basson to leave France.",
+        "The book became very popular and inspired imitators like Jean Errard and Agostino Ramelli.",
+        "Keller (1985, 1965) views this publication as a milestone in the \"theatre of machines\" genre."
+      ],
+      "sources": [
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361.",
+        "Keller, A. (1965). Introduction. In A theatre of machines. New York, Macmillan. http://archive.org/details/theatreofmachine01kell"
+      ]
+    },
+    {
+      "year": 1578,
+      "title": "Theatrum Instrumentorum (2nd edition)",
+      "tags": [
+        "publication",
+        "instruments"
+      ],
+      "author": "Jacques Besson",
+      "language": "Latin",
+      "city": "Lyon",
+      "details": [
+        "A decorated and illustrated edition, printed posthumously with added content by François Béroalde de Verville."
+      ],
+      "sources": [
+        "Keller, A. (1965). Introduction. In A theatre of machines. New York, Macmillan. http://archive.org/details/theatreofmachine01kell"
+      ]
+    },
+    {
+      "year": 1583,
+      "title": "Premier Livre des instruments mathématiques et mécaniques",
+      "tags": [
+        "publication",
+        "instruments"
+      ],
+      "author": "Jean Errard",
+      "language": "French",
+      "city": "Nancy",
+      "details": [
+        "An early book of Errard, inspired by Besson's Theatrum Instrumentorum."
+      ],
+      "sources": [
+        "https://www.cheminsdememoire.gouv.fr/fr/jean-errard",
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
+      ]
+    },
+    {
+      "year": 1600,
+      "title": "La fortification démonstrée et réduicte en art",
+      "tags": [
+        "publication",
+        "instruments",
+        "fortifications"
+      ],
+      "author": "Jean Errard",
+      "language": "French",
+      "city": "Paris",
+      "details": [
+        "The most famous book of Errard, which was translated to multiple languages and had a few editions."
+      ],
+      "sources": [
+        "https://www.cheminsdememoire.gouv.fr/fr/jean-errard"
+      ]
+    },
+    {
+      "year": 1588,
+      "title": "Le diverse et artificiose machine",
+      "tags": [
+        "publication",
+        "instruments"
+      ],
+      "author": "Agostino Ramelli",
+      "language": "French and Italian",
+      "city": "Paris",
+      "details": [
+        "Inspired by Besson's Theatrum Instrumentorum (Keller, 1985).",
+        "Offers original designs of \"mechanical\" solutions to practical problems, like water management, grain milling, excavation, hauling of heavy objects, siege and defense of cities, and even the entertainment.",
+        "Includes many illustrations, accompanied by detailed descriptions in French and Italian."
+      ],
+      "sources": [
+        "https://digital.sciencehistory.org/works/4b29b614k",
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
+      ]
+    },
+    {
+      "year": 1556,
+      "title": "De Re Metallica",
+      "tags": [
+        "publication",
+        "practical_mathematics",
+        "instruments"
+      ],
+      "author": "Georgius Agricola",
+      "language": "Latin",
+      "city": "Basel",
+      "details": [
+        "The book was very popular throughout Europe (Keller, 1985).",
+        "A book about mining that includes a detailed description of the machines used in mining."
+      ],
+      "sources": [
+        "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
       ]
     }
   ]
