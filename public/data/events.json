@@ -75,11 +75,12 @@
     },
     {
       "year": 1700,
-      "title": "According to Denniss (2006), decimal fractions held major significance only from the 18th century onwards",
+      "title": "Denniss (2006): Decimal fractions gain importance",
       "tags": [
         "decimal_fraction"
       ],
       "details": [
+        "According to Denniss (2006), decimal fractions held major significance only from the 18th century onwards",
         "A possible reason, as suggested by Denniss (2006), is that in practical usage, they could often be circumvented by selecting a small base unit. Denniss (2006) asserts that even though decimal fractions were introduced as early as 1585, they experienced a slow adoption rate."
       ],
       "sources": [
@@ -101,7 +102,8 @@
         "The first published table of logarithms."
       ],
       "sources": [
-        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+        "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries",
+        "Archibald, R. C. (1949). History of Mathematics After the Sixteenth Century. The American Mathematical Monthly, 56(1), 35–56. https://doi.org/10.2307/2304570"
       ]
     },
     {
@@ -184,8 +186,7 @@
       "tags": [
         "publication",
         "logarithm",
-        "precomputed_tables",
-        "instruments"
+        "precomputed_tables"
       ],
       "author": "Jost B\u00fcrgi",
       "language": "German",
@@ -217,7 +218,7 @@
       ],
       "sources": [
         "https://www.britannica.com/biography/Henry-Briggs#ref175711",
-        "https://www.britannica.com/biography/Henry-Briggs#ref175711"
+        "Archibald, R. C. (1949). History of Mathematics After the Sixteenth Century. The American Mathematical Monthly, 56(1), 35–56. https://doi.org/10.2307/2304570"
       ]
     },
     {
@@ -227,7 +228,8 @@
         "publication",
         "logarithm",
         "precomputed_tables",
-        "astronomy"
+        "astronomy",
+        "practical_math"
       ],
       "author": "Johannes Kepler",
       "language": "Latin",
@@ -273,7 +275,7 @@
       "city": "Leipzig",
       "details": [
         "The first book to use the + and - signs.",
-        "Includes many examples for aiding \"allen kauffmanschafft\""
+        "Includes many examples for aiding \"allen kauffmanschafft\"."
       ],
       "sources": [
         "https://mathshistory.st-andrews.ac.uk/Biographies/Widman/"
@@ -374,7 +376,7 @@
         "Includes new notation: variables are represented by letters at the end of the alphabet, and known quantities by letters at the beginning of the alphabet. Includes exponential notation to indicate powers.",
         "Do not adhere to the principle of homogeneity, which states that all terms in an equation must have the same dimension.",
         "Shows by construction how to represent multiplication and divisions of lines.",
-        "Attempts to find the construction of of solutions to geometric problems by means of instruments that were acceptable generalizations of ruler and compass.",
+        "Attempts to find the construction of solutions to geometric problems by means of instruments that were acceptable generalizations of ruler and compass.",
         "Emphasize construction",
         "Presents a method for determination of tangents that could in principle be applied to all curves that can be described by polynomial equations in two variables. This method relied on finding the normal line (a line perpendicular to the tangent) to the curve by using a condition: it should be the unique radius intersecting the curve at only one point."
       ],
@@ -758,7 +760,7 @@
       "details": [
         "Proposes to strengthen the emphasis on philosophy and natural knowledge to address defects crippling contemporary education.",
         "Propose creating university positions devoted to artes and sciences at large, rather than to specific profession.",
-        "Argues that the teaching of sciences should involve technical education. Suggests to use instruments anf experiments."
+        "Argues that the teaching of sciences should involve technical education. Suggests to use instruments and experiments."
       ],
       "sources": [
         "Popper, N. (2006). “Abraham, Planter of Mathematics”: Histories of Mathematics and Astrology in Early Modern Europe. Journal of the History of Ideas, 67(1), 87–106."
@@ -767,7 +769,12 @@
     {
       "year": 1487,
       "title": "Pico planned a public disputation of his 900 theses",
-      "tags": [],
+      "tags": [
+        "humanism",
+        "religion",
+        "views_on_antiquity",
+        "mysticism"
+      ],
       "details": [
         "Pico argued that all philosophical and theological schools, including the Christianity, Kabbalah, Islam, etc., originated from the same source, and exemplify the same truth.",
         "Exemplifies the Renaissance interest in the unity of knowledge and synthesis of different traditions.",
@@ -803,7 +810,7 @@
       ],
       "details": [
         "According to Goulding (2006), Ramus's attacks on Aristotle and modern logic provoked his politically influential opponents, and he was banned by the royal order.",
-        "According to Goulding (2006), this caused Ramus to focus on mathematics."
+        "Goulding (2006) claim that the ban caused Ramus to focus on mathematics."
       ],
       "sources": [
         "Goulding, R. (2006). Method and Mathematics: Peter Ramus’s Histories of the Sciences. Journal of the History of Ideas, 67(1), 63–85."
@@ -826,7 +833,8 @@
       "tags": [
         "publication",
         "education",
-        "antiquity"
+        "views_on_antiquity",
+        "scholarly_status_of_math"
       ],
       "author": "Petrus Ramus",
       "language": "Latin",
@@ -851,8 +859,8 @@
       "city": "Paris",
       "details": [
         "Ramus changes his previously attitude towards mathematics, no longer viewing it as the most natual and well organized art.",
-        "Argues that Euclid violated his two of the laws of method, since he broke the law of justice/homogeneity by mixing geometry and arithmetic, and the law of wisdom, since he started with geometry, whereas the treatment of quantity (in arithmetic) has to come first.",
-        "Calls for reorganization of mathematics, which will make the demonstration, which he viewed as mere explanations, unnecessary, because the truth will be evident."
+        "Argues that Euclid violated two of his laws of method: he broke the law of justice/homogeneity by mixing geometry and arithmetic, and the law of wisdom by starting  with geometry, whereas the treatment of quantity (in arithmetic) has to come first.",
+        "Calls for reorganization of mathematics, which will make the demonstration, which he viewed as mere explanations, unnecessary, because the reorganization will make the truth evident."
       ],
       "sources": [
         "Strazzoni, A. (2017). Ramism. In M. Sgarbi (Ed.), Encyclopedia of Renaissance Philosophy (pp. 1–16). Springer International Publishing. https://doi.org/10.1007/978-3-319-02848-4_683-1",
@@ -864,9 +872,9 @@
       "title": "Scholae mathematicae",
       "tags": [
         "publication",
-        "practical_mathematics",
+        "practical_math",
         "religion",
-        "antiquity"
+        "views_on_antiquity"
       ],
       "author": "Petrus Ramus",
       "language": "Latin",
@@ -889,15 +897,17 @@
       "tags": [
         "publication",
         "education",
-        "instruments"
+        "instruments",
+        "proofs",
+        "practical_math"
       ],
       "author": "Robert Recorde",
       "language": "English",
       "city": "London",
       "details": [
-        "No proofs are given in this book but instead Recorde explains why the theorems are true and gives examples to aid a student to understand not only what was being taught, but also why it was being taught.",
+        "No proofs are given in this book. Instead, Recorde explains why the theorems are true and gives examples to aid a student to understand not only what was being taught, but why it was being taught.",
         "From the preface: \"Carpenters, Karvers, Joyners and masons doo willingly acknowledge that they can worke nothyng without reason of geometrie\"",
-        "States that the necessary instruments for many practices, like sailing the sea, were founded by geometers."
+        "States that the necessary instruments for many practices, like sailing the sea, are founded by geometers."
       ],
       "sources": [
         "https://mathshistory.st-andrews.ac.uk/Biographies/Recorde/"
@@ -908,7 +918,7 @@
       "title": "Arithmetica e geometria",
       "tags": [
         "publication",
-        "practical_mathematics"
+        "practical_math"
       ],
       "author": "Giovanni Francesco Peverone",
       "language": "Italian",
@@ -925,7 +935,7 @@
       "title": "Protomathesis",
       "tags": [
         "publication",
-        "practical_mathematics",
+        "practical_math",
         "instruments"
       ],
       "author": "Oronce Fine",
@@ -934,7 +944,7 @@
       "details": [
         "Compendium of mathematics consisting of writings on arithmetic, geometry, trigonometry, astronomy, and instrument-making.",
         "Includes examples of the use of mathematics in practical applications, such as the use of a quadrant in determining the inaccessible depth of a well.",
-        "Quate (translated by Keller, 1985): \"you will not be able to understand the proper causes of things unless you establish the numbers, and are at the same time a geometer\"."
+        "Quote (translated by Keller, 1985): \"you will not be able to understand the proper causes of things unless you establish the numbers, and are at the same time a geometer\"."
       ],
       "sources": [
         "https://maa.org/press/periodicals/convergence/mathematical-treasure-oronce-fines-emprotomathesisem"
@@ -942,11 +952,11 @@
     },
     {
       "year": 1500,
-      "title": "Cannons become a decisive instrument of war",
+      "title": "Cannons became a decisive instrument of war",
       "tags": [
         "instruments",
         "fortifications",
-        "practical_mathematics"
+        "practical_math"
       ],
       "details": [
         "According to Keller (1985), around 1500 cannons has reached sufficient efficiency and mobility to become a decisive instrument of war.",
@@ -961,7 +971,7 @@
       "title": "Libellus de Locorum describendorum ratione",
       "tags": [
         "publication",
-        "practical_mathematics",
+        "practical_math",
         "instruments"
       ],
       "author": "Gemma Frisius",
@@ -979,7 +989,8 @@
       "title": "Theatrum Instrumentorum",
       "tags": [
         "publication",
-        "instruments"
+        "instruments",
+        "practical_math"
       ],
       "author": "Jacques Besson",
       "language": "Latin",
@@ -999,7 +1010,8 @@
       "title": "Theatrum Instrumentorum (2nd edition)",
       "tags": [
         "publication",
-        "instruments"
+        "instruments",
+        "practical_math"
       ],
       "author": "Jacques Besson",
       "language": "Latin",
@@ -1016,7 +1028,8 @@
       "title": "Premier Livre des instruments mathématiques et mécaniques",
       "tags": [
         "publication",
-        "instruments"
+        "instruments",
+        "practical_math"
       ],
       "author": "Jean Errard",
       "language": "French",
@@ -1035,7 +1048,8 @@
       "tags": [
         "publication",
         "instruments",
-        "fortifications"
+        "fortifications",
+        "practical_math"
       ],
       "author": "Jean Errard",
       "language": "French",
@@ -1052,7 +1066,8 @@
       "title": "Le diverse et artificiose machine",
       "tags": [
         "publication",
-        "instruments"
+        "instruments",
+        "practical_math"
       ],
       "author": "Agostino Ramelli",
       "language": "French and Italian",
@@ -1072,15 +1087,15 @@
       "title": "De Re Metallica",
       "tags": [
         "publication",
-        "practical_mathematics",
+        "practical_math",
         "instruments"
       ],
       "author": "Georgius Agricola",
       "language": "Latin",
       "city": "Basel",
       "details": [
-        "The book was very popular throughout Europe (Keller, 1985).",
-        "A book about mining that includes a detailed description of the machines used in mining."
+        "A book about mining that includes a detailed description of the machines used in mining.",
+        "The book was very popular throughout Europe (Keller, 1985)."
       ],
       "sources": [
         "Keller, A. (1985). Mathematics, Mechanics and the Origins of the Culture of Mechanical Invention. Minerva, 23(3), 348–361."
