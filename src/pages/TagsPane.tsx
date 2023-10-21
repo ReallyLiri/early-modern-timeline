@@ -110,8 +110,8 @@ const TagCard = ({
 
 const CloseButton = styled.div`
   position: fixed;
-  margin-left: -20px;
-  margin-top: -12px;
+  margin-left: -1.25rem;
+  margin-top: -0.75rem;
   background-color: white;
   border-radius: 50%;
   text-align: center;
@@ -132,6 +132,7 @@ const Divider = styled.div`
 export const TagsPane = ({ tagsWithCount, tagDetails, communities }: Props) => {
   const [collapsed, setCollapsed] = useState(true);
   const paneRef = useRef<HTMLDivElement>(null);
+  const hintRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (collapsed || !paneRef.current) {
@@ -152,7 +153,9 @@ export const TagsPane = ({ tagsWithCount, tagDetails, communities }: Props) => {
   return (
     <Container>
       {collapsed ? (
-        <Hint onClick={() => setCollapsed(false)}>Tags</Hint>
+        <Hint ref={hintRef} onClick={() => setCollapsed(false)}>
+          Tags
+        </Hint>
       ) : (
         <Pane ref={paneRef}>
           <CloseButton title="Close" onClick={() => setCollapsed(true)}>

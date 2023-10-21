@@ -145,7 +145,7 @@ export const TableControls = ({
     },
     [minYear, maxYear],
   );
-  const [fromYear, untilYear] = yearsRange
+  const [fromYear, untilYear] = yearsRange;
   useEffect(() => {
     setTimeout(() => {
       setYearsRange((range) => [
@@ -168,10 +168,11 @@ export const TableControls = ({
             onChange={(options) => {
               const selectedIds = options.map((option) => option.value);
               setVisibilityState((state) => {
+                const nextState = { ...state };
                 Object.keys(state).forEach(
-                  (key) => (state[key] = selectedIds.includes(key)),
+                  (key) => (nextState[key] = selectedIds.includes(key)),
                 );
-                return state;
+                return nextState;
               });
             }}
             isMulti
