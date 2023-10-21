@@ -90,8 +90,8 @@
         "roots"
       ],
       "author": "Simon Stevin",
-        "language": "French",
-        "city": "Leiden",
+      "language": "French",
+      "city": "Leiden",
       "details": [
         "Stevin reiterates his theory of decimal fractions, provides a unifying theory for quadratic equations, and introduces a method of approximation to find the roots of higher order equations.",
         "Criticizes the old distinction between numbers and magnitudes (grandeur), stating that number essentially belongs in the nature of magnitude. Argues that no number is discontinuous or discrete because numbers are measures, and all measures are continuous necessarily.",
@@ -113,12 +113,12 @@
         "practical_math"
       ],
       "author": "Regiomontanus",
-        "language": "Latin",
-        "details": [
-          "Deals with plane and spherical trigonometry.",
-          "Structured in a similar way to the Elements",
-          "States in the introduction that the science of triangles is necessary for astronomy."
-          ],
+      "language": "Latin",
+      "details": [
+        "Deals with plane and spherical trigonometry.",
+        "Structured in a similar way to the Elements",
+        "States in the introduction that the science of triangles is necessary for astronomy."
+      ],
       "sources": [
         "https://www.science.org/doi/10.1126/science.157.3787.418.b",
         "https://mathshistory.st-andrews.ac.uk/Biographies/Regiomontanus/"
