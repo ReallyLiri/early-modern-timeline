@@ -4,12 +4,13 @@
       "year": 1585,
       "title": "De Thiende",
       "tags": [
-        "decimal_fraction"
+        "decimal_fraction",
+        "practical_math"
       ],
       "author": "Simon Stevin",
       "language": "Dutch",
       "details": [
-        "This book introduced the decimal fraction's notation.",
+        "The book introduced the decimal fraction's notation.",
         "It extended the principles of Hindu-Arabic arithmetic to calculation. ",
         "In the book, Stevin emphasized the utility of decimal arithmetic \"for all accounts encountered in the affairs of men\" and explained in an appendix how it could be applied to surveying, stereometry, astronomy, and mensuration. ",
         "Stevin showed how the usual arithmetic of whole numbers could be extended to decimal fractions using rules that determined the positioning of the negative powers of 10 (1.2 \u21d2 2 is 10^-1\u2026).",
@@ -35,6 +36,92 @@
       ],
       "sources": [
         "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
+      ]
+    },
+    {
+      "year": 1604,
+      "title": "Perspective",
+      "tags": [
+        "publication",
+        "practical_math",
+        "perspective",
+        "architecture"
+      ],
+      "author": "Hans Vredeman de Vries",
+      "language": "Latin",
+      "city": "Leyden and the Hague",
+      "details": [
+        "The text was issued simultaneously in French, Latin, Dutch and German in 1604-1605.",
+        "One of the major guidebooks on perspective for designers, painters, and architects."
+      ],
+      "sources": [
+        "https://www.christies.com/en/lot/lot-5698647",
+        "https://www.relewis.com/devries-perspective_link.html",
+        "Kemp, M. (1986). Simon Stevin and Pieter Saenredam: A Study of Mathematics and Vision in Dutch Science and Art. The Art Bulletin, 68(2), 237–252. https://doi.org/10.2307/3050934"
+      ]
+    },
+    {
+      "year": 1572,
+      "title": "Opticae thesaurus",
+      "tags": [
+        "publication",
+        "practical_math",
+        "perspective"
+      ],
+      "author": "Friedrich Risner",
+      "language": "Latin",
+      "city": "Basel",
+      "details": [
+        "First printed edition of Alhazen's Book of Optics that was available before in Latin as a manuscript.",
+        "As opposed to Euclid's Optics, this book argues that vision is a result og light rays entering the eye, and not emitted bt it.",
+        "The book was influential."
+      ],
+      "sources": [
+        "Kemp, M. (1986). Simon Stevin and Pieter Saenredam: A Study of Mathematics and Vision in Dutch Science and Art. The Art Bulletin, 68(2), 237–252. https://doi.org/10.2307/3050934"
+      ]
+    },
+    {
+      "year": 1585,
+      "title": "L’Arithmetique",
+      "tags": [
+        "decimal_fraction",
+        "publication",
+        "number_and_magnitude",
+        "roots"
+      ],
+      "author": "Simon Stevin",
+        "language": "French",
+        "city": "Leiden",
+      "details": [
+        "Stevin reiterates his theory of decimal fractions, provides a unifying theory for quadratic equations, and introduces a method of approximation to find the roots of higher order equations.",
+        "Criticizes the old distinction between numbers and magnitudes (grandeur), stating that number essentially belongs in the nature of magnitude. Argues that no number is discontinuous or discrete because numbers are measures, and all measures are continuous necessarily.",
+        "Argues that roots are numbers."
+      ],
+      "sources": [
+        "https://maa.org/press/periodicals/convergence/mathematical-treasures-simon-stevins-arithmetic",
+        "Renaissance notions of number and magnitude. (2006). Historia Mathematica, 33(1), 63–81. https://doi.org/10.1016/j.hm.2004.11.011"
+      ]
+    },
+    {
+      "year": 1464,
+      "title": "De triangulis omnimodis",
+      "tags": [
+        "publication",
+        "manuscript",
+        "trigonometry",
+        "astronomy",
+        "practical_math"
+      ],
+      "author": "Regiomontanus",
+        "language": "Latin",
+        "details": [
+          "Deals with plane and spherical trigonometry.",
+          "Structured in a similar way to the Elements",
+          "States in the introduction that the science of triangles is necessary for astronomy."
+          ],
+      "sources": [
+        "https://www.science.org/doi/10.1126/science.157.3787.418.b",
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Regiomontanus/"
       ]
     },
     {
@@ -268,7 +355,7 @@
       "title": "Behende und hupsche Rechnung auf allen kauffmanschafft",
       "tags": [
         "publication",
-        "notation"
+        "notations"
       ],
       "author": "Johann Widmann",
       "language": "German",
@@ -286,7 +373,7 @@
       "title": "Summa de arithmetica, geometria, proportioni et proportionalita",
       "tags": [
         "publication",
-        "notation"
+        "notations"
       ],
       "author": "Luca Pacioli",
       "language": "Italian",
@@ -304,7 +391,7 @@
       "title": "The Whetstone of Witte",
       "tags": [
         "publication",
-        "notation"
+        "notations"
       ],
       "author": "Robert Recorde",
       "language": "English",
@@ -321,7 +408,7 @@
       "title": "In artem analyticam isagoge",
       "tags": [
         "publication",
-        "notation"
+        "notations"
       ],
       "author": "Fran\u00e7ois Vi\u00e8te",
       "language": "Latin",
@@ -340,7 +427,7 @@
       "title": "Methodus ad disquirendam maximam et minimam et de tangentibus linearum curvarum",
       "tags": [
         "publication",
-        "notation",
+        "notations",
         "curves",
         "analytic_geometry",
         "manuscript"
@@ -362,7 +449,7 @@
       "title": "La G\u00e9om\u00e9trie",
       "tags": [
         "publication",
-        "notation",
+        "notations",
         "curves",
         "analytic_geometry",
         "construction",
@@ -462,7 +549,7 @@
       "title": "Vi\u00e8te Opera mathematica",
       "tags": [
         "publication",
-        "notation"
+        "notations"
       ],
       "author": "Frans van Schooten",
       "language": "Latin",
@@ -852,7 +939,9 @@
       "year": 1555,
       "title": "Arithmetica",
       "tags": [
-        "publication"
+        "publication",
+        "scholarly_status_of_math",
+        "proofs"
       ],
       "author": "Petrus Ramus",
       "language": "Latin",
@@ -995,8 +1084,8 @@
       "author": "Jacques Besson",
       "language": "Latin",
       "details": [
-        "Include designs of multiple inventions and instruments.",
-        "The book was published in a rash, probably due to the political situation that forced Basson to leave France.",
+        "Includes designs of multiple inventions and instruments.",
+        "The book was published in a rash, possibly due to the political situation that forced Basson to leave France.",
         "The book became very popular and inspired imitators like Jean Errard and Agostino Ramelli.",
         "Keller (1985, 1965) views this publication as a milestone in the \"theatre of machines\" genre."
       ],
