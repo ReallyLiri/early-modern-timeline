@@ -56,18 +56,24 @@
     },
     "number_and_magnitude": {
       "details": [
+        "In in Euclidean geometry there is a distinction between magnitude, which is continuous, and number, which is a multitude of indivisible units",
         "As far as we know, the separate conception of number and magnitude was preserved in the Latin translation in the middle ages and was taught in major schools in the first half of the 15th century.",
         "In the 16th Cardano, Bombelli, Stevin, and others confronted this distinction.",
         "The distinction was largely gone by the second half of the 17th century.",
         "Malet (2006) argues that The conceptual shift came to the Latin West mostly by way of the applied mathematics taught in abacus schools and explained in abacus manuscripts."
       ],
-      "source": "Renaissance notions of number and magnitude. (2006). Historia Mathematica, 33(1), 63–81. https://doi.org/10.1016/j.hm.2004.11.011"
+      "source": "Renaissance notions of number and magnitude. (2006). Historia Mathematica, 33(1), 63–81. https://doi.org/10.1016/j.hm.2004.11.011\nhttps://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
     },
     "roots": {
       "details": [
         "Roots were sometimes classified as being \"absurd\", \"less perfect\" or \"inexpressible\"."
       ],
       "source": "Renaissance notions of number and magnitude. (2006). Historia Mathematica, 33(1), 63–81. https://doi.org/10.1016/j.hm.2004.11.011"
+    },
+    "independent_invention": {
+      "details": [
+        "This tag refers both to independent discovery and independent invention."
+      ]
     }
   }
 }
