@@ -21,6 +21,9 @@ import {
   EventField,
   EventFieldValue,
 } from "../components/TableColumns";
+import { FlexFiller } from "../components/FlexFiller";
+import { TagCircle } from "../components/Tag";
+import { PUBLICATION_COLOR } from "../theme";
 
 type Props = {
   events: TimelineEvent[];
@@ -36,10 +39,15 @@ const Container = styled.div`
   gap: 1rem;
 `;
 
-const RowsCount = styled.div`
-  width: calc(100% - 1rem);
-  text-align: end;
-`;
+const TableInsights = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 2rem;
+  align-items: end;
+  justify-items: center;
+  `
+
 
 const filterEvents = (
   events: TimelineEvent[],
@@ -57,7 +65,8 @@ const filterEvents = (
           .filter((key) => !visibility[key])
           .forEach((key) => delete props[key as EventField]);
       }
-      const json = JSON.stringify(props).toLocaleLowerCase();
+      let json = JSON.stringify(props).toLocaleLowerCase();
+      json = json + " " + json.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       if (!json.includes(freeText.toLocaleLowerCase())) {
         return false;
       }
@@ -103,12 +112,15 @@ export const TimelineTable = ({ events }: Props) => {
   const [yearsRange, setYearsRange] = useState<[number, number]>([0, 0]);
   const tagsWithCount = useMemo(
     () =>
-      events.reduce((acc, ev) => {
-        ev.tags.forEach((tag) => {
-          acc[tag] = (acc[tag] || 0) + 1;
-        });
-        return acc;
-      }, {} as Record<string, number>),
+      events.reduce(
+        (acc, ev) => {
+          ev.tags.forEach((tag) => {
+            acc[tag] = (acc[tag] || 0) + 1;
+          });
+          return acc;
+        },
+        {} as Record<string, number>,
+      ),
     [events],
   );
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
@@ -185,10 +197,14 @@ export const TimelineTable = ({ events }: Props) => {
       {Object.values(columnVisibility).every((v) => !v) ? (
         <div>No columns selected :(</div>
       ) : (
-        <RowsCount>
-          {filteredEvents.length} records
-          {filteredEvents.length < events.length && ` (${events.length} total)`}
-        </RowsCount>
+        <TableInsights>
+          <FlexFiller/>
+          <div><TagCircle tag="" color={PUBLICATION_COLOR}/> Publication</div>
+          <div>
+            {filteredEvents.length} records
+            {filteredEvents.length < events.length && ` (${events.length} total)`}
+          </div>
+        </TableInsights>
       )}
       <TableComponent table={table} />
     </Container>

@@ -1,9 +1,14 @@
 import { flexRender, Table } from "@tanstack/react-table";
 import { FlexFiller } from "./FlexFiller";
 import styled, { css } from "styled-components";
-import { BACKGROUND_COLOR, MAIN_COLOR, SECONDARY_COLOR } from "../theme";
+import {
+  BACKGROUND_COLOR,
+  MAIN_COLOR,
+  PUBLICATION_COLOR,
+  SECONDARY_COLOR,
+} from "../theme";
 import { TimelineEvent } from "../data/data";
-import { isArray, startCase } from "lodash";
+import { isArray } from "lodash";
 import { EventField, EventFieldValue } from "./TableColumns";
 import { ReactNode } from "react";
 import { Anchor } from "./Anchor";
@@ -86,7 +91,7 @@ const TableRow = styled.tr<{ publication: boolean }>`
   ${({ publication }) =>
     publication &&
     css`
-      background-color: #f1f1f1;
+      background-color: ${PUBLICATION_COLOR};
     `};
 `;
 
@@ -128,12 +133,9 @@ export const renderCell = (
         </InlineList>
       );
     }
-    return value.map((v) => startCase(v)).join(", ");
+    return value.join(", ");
   }
-  if (field === "title") {
-    return value;
-  }
-  return startCase(value.toString());
+  return value.toString();
 };
 
 export const TableComponent = ({ table }: Props) => (

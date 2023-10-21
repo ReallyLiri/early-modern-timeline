@@ -143,6 +143,7 @@ const RefreshButton = styled.div`
 const ConstructionWarning = styled.div`
   width: 100%;
   text-align: center;
+  font-size: 1.5rem;
   font-weight: bold;
 `;
 
