@@ -5,6 +5,7 @@ import { Communities, TagDetails } from "../data/data";
 import { get } from "lodash";
 import { Tag } from "../components/Tag";
 import { Paragraph, Sources } from "../components/TableComponent";
+import { useWidthAnimation } from "../components/useWidthAnimation";
 
 type Props = {
   tagsWithCount: Record<string, number>;
@@ -133,6 +134,7 @@ export const TagsPane = ({ tagsWithCount, tagDetails, communities }: Props) => {
   const [collapsed, setCollapsed] = useState(true);
   const paneRef = useRef<HTMLDivElement>(null);
   const hintRef = useRef<HTMLDivElement>(null);
+  useWidthAnimation(hintRef, 3, 5);
 
   useEffect(() => {
     if (collapsed || !paneRef.current) {
