@@ -13,7 +13,9 @@
         "Frans van Schooten",
         "Christiaan Huygens"
       ],
-      "source": "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/\nhttps://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      "sources": [
+        "https://mathshistory.st-andrews.ac.uk/Biographies/Schooten/\nhttps://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries"
+      ]
     }
   }
 }
