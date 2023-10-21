@@ -23,11 +23,12 @@ import {
 } from "../components/TableColumns";
 import { FlexFiller } from "../components/FlexFiller";
 import { TagCircle } from "../components/Tag";
-import { PUBLICATION_COLOR } from "../theme";
+import { BACKGROUND_COLOR, PUBLICATION_COLOR, SECONDARY_COLOR } from "../theme";
+import stc from "string-to-color";
 
 type Props = {
   events: TimelineEvent[];
-  tagsWithCount: Record<string, number>
+  tagsWithCount: Record<string, number>;
 };
 
 const Container = styled.div`
@@ -47,8 +48,7 @@ const TableInsights = styled.div`
   gap: 2rem;
   align-items: end;
   justify-items: center;
-  `
-
+`;
 
 const filterEvents = (
   events: TimelineEvent[],
@@ -87,6 +87,22 @@ const filterEvents = (
     return true;
   });
 };
+
+const Legend = styled.div`
+  align-items: center;
+  justify-items: center;
+  display: flex;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+`;
+
+const PublicationCircle = styled.div`
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: ${PUBLICATION_COLOR};
+  border: 2px solid ${SECONDARY_COLOR};
+`;
 
 export const TimelineTable = ({ events, tagsWithCount }: Props) => {
   const [filteredEvents, setFilteredEvents] = useState<TimelineEvent[]>([]);
@@ -187,11 +203,15 @@ export const TimelineTable = ({ events, tagsWithCount }: Props) => {
         <div>No columns selected :(</div>
       ) : (
         <TableInsights>
-          <FlexFiller/>
-          <div><TagCircle tag="" color={PUBLICATION_COLOR}/> Publication</div>
+          <Legend>
+            Publications rows are highlighted in <PublicationCircle /> and
+            non-publications in white.
+          </Legend>
+          <FlexFiller />
           <div>
             {filteredEvents.length} records
-            {filteredEvents.length < events.length && ` (${events.length} total)`}
+            {filteredEvents.length < events.length &&
+              ` (${events.length} total)`}
           </div>
         </TableInsights>
       )}
