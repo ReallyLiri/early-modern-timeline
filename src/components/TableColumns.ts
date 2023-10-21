@@ -9,7 +9,7 @@ export type EventFieldValue = TimelineEvent[keyof TimelineEvent];
 const columnHelper = createColumnHelper<TimelineEvent>();
 
 export const columns = [
-    columnHelper.accessor("year", { sortingFn: "alphanumeric" }),
+    columnHelper.accessor("year", { sortingFn: "alphanumeric"}),
     columnHelper.accessor("title", {}),
     columnHelper.accessor("author", {}),
     columnHelper.accessor("language", {}),

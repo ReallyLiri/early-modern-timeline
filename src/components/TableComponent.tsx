@@ -10,7 +10,7 @@ import {
 import { TimelineEvent } from "../data/data";
 import { isArray } from "lodash";
 import { EventField, EventFieldValue } from "./TableColumns";
-import { ReactNode } from "react";
+import { MouseEvent, TouchEvent, ReactNode, useEffect } from "react";
 import { Anchor } from "./Anchor";
 import { Tag } from "./Tag";
 
@@ -143,38 +143,46 @@ export const TableComponent = ({ table }: Props) => (
     <thead>
       {table.getHeaderGroups().map((headerGroup) => (
         <tr key={headerGroup.id}>
-          {headerGroup.headers.map((header) => (
-            <th
-              key={header.id}
-              onClick={header.column.getToggleSortingHandler()}
-              style={{
-                width: header.getSize(),
-                ...(header.column.getCanSort() ? { cursor: "pointer" } : {}),
-              }}
-            >
-              <HeaderCell>
-                {flexRender(
-                  header.column.columnDef.header,
-                  header.getContext(),
-                )}
-                {{
-                  asc: " ⬆",
-                  desc: " ⬇",
-                }[header.column.getIsSorted() as string] ?? " ·"}
-                <FlexFiller />
-                <div
-                  {...{
-                    onMouseDown: header.getResizeHandler(),
-                    onTouchStart: header.getResizeHandler(),
-                    className: `resizer ${
+          {headerGroup.headers.map((header) => {
+            const headerResizeHandler = header.getResizeHandler();
+            const resizeHandler = (
+              ev: MouseEvent<HTMLDivElement> | TouchEvent<HTMLDivElement>,
+            ) => {
+              headerResizeHandler(ev);
+              ev.preventDefault();
+              ev.stopPropagation();
+            };
+            return (
+              <th key={header.id} style={{ width: header.getSize() }}>
+                <HeaderCell>
+                  <div
+                    onClick={header.column.getToggleSortingHandler()}
+                    style={
+                      header.column.getCanSort() ? { cursor: "pointer" } : {}
+                    }
+                  >
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext(),
+                    )}
+                    {{
+                      asc: " ⬆",
+                      desc: " ⬇",
+                    }[header.column.getIsSorted() as string] ?? " ·"}
+                  </div>
+                  <FlexFiller />
+                  <div
+                    onMouseDown={resizeHandler}
+                    onTouchStart={resizeHandler}
+                    className={`resizer ${
                       header.column.getIsResizing() ? "isResizing" : ""
-                    }`,
-                    style: { height: 32 },
-                  }}
-                />
-              </HeaderCell>
-            </th>
-          ))}
+                    }`}
+                    style={{ height: 32 }}
+                  />
+                </HeaderCell>
+              </th>
+            );
+          })}
         </tr>
       ))}
     </thead>
@@ -183,7 +191,9 @@ export const TableComponent = ({ table }: Props) => (
         <TableRow key={row.id} publication={row.original.publication}>
           {row.getVisibleCells().map((cell) => (
             <td key={cell.id}>
-              {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              <div style={{ width: "fit-content" }}>
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </div>
             </td>
           ))}
         </TableRow>

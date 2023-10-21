@@ -1,8 +1,13 @@
-import { startCase } from "lodash";
+import { isString, startCase } from "lodash";
 import { BACKGROUND_COLOR, SECONDARY_COLOR } from "../theme";
 import styled from "styled-components";
-import { DebouncedInput } from "./DebouncedInput";
-import { Dispatch, SetStateAction, useMemo } from "react";
+import {
+  Dispatch,
+  SetStateAction,
+  useCallback,
+  useEffect,
+  useMemo,
+} from "react";
 import { Table, VisibilityState } from "@tanstack/react-table";
 import { TimelineEvent } from "../data/data";
 import Select from "react-select";
@@ -43,7 +48,7 @@ const Box = styled.div<{ width: number }>`
   }
 `;
 
-const StyledInput = styled(DebouncedInput)`
+const StyledInput = styled.input`
   width: 100%;
   background-color: white;
   border-radius: 4px;
@@ -121,6 +126,35 @@ export const TableControls = ({
     [tags, tagsWithCount],
   );
 
+  const sanitizeYear = useCallback(
+    (year: string | number, index: number): number => {
+      if (maxYear < minYear) {
+        return year as number;
+      }
+      if (isString(year)) {
+        year = parseInt(year);
+      }
+      if (isNaN(year)) {
+        year = index === 0 ? minYear : maxYear;
+      }
+      const inRangeYear = Math.min(Math.max(year, minYear), maxYear);
+      if (inRangeYear !== year) {
+        return index === 0 ? minYear : maxYear;
+      }
+      return inRangeYear;
+    },
+    [minYear, maxYear],
+  );
+  const [fromYear, untilYear] = yearsRange
+  useEffect(() => {
+    setTimeout(() => {
+      setYearsRange((range) => [
+        sanitizeYear(range[0], 0),
+        sanitizeYear(range[1], 1),
+      ]);
+    }, 1000);
+  }, [sanitizeYear, setYearsRange, fromYear, untilYear]);
+
   return (
     <Controls>
       <ControlsRows>
@@ -176,16 +210,20 @@ export const TableControls = ({
         <Box width={boxWidth}>
           <Label>From:</Label>
           <StyledInput
-            onChange={(year) => setYearsRange((r) => [year as number, r[1]])}
-            value={yearsRange[0]}
+            onChange={(e) =>
+              setYearsRange((r) => [e.target.value as unknown as number, r[1]])
+            }
+            value={fromYear}
             type="number"
             max={maxYear}
             min={minYear}
           />
           <Label>Until:</Label>
           <StyledInput
-            onChange={(year) => setYearsRange((r) => [r[0], year as number])}
-            value={yearsRange[1]}
+            onChange={(e) =>
+              setYearsRange((r) => [r[0], e.target.value as unknown as number])
+            }
+            value={untilYear}
             type="number"
             max={maxYear}
             min={minYear}

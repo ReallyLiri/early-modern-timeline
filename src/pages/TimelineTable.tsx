@@ -171,6 +171,7 @@ export const TimelineTable = ({ events }: Props) => {
           info.getValue() as EventFieldValue,
         ),
       header: (info) => startCase(info.column.id),
+      size: 20,
     },
   });
 
