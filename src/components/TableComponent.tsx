@@ -10,7 +10,7 @@ import {
 import { TimelineEvent } from "../data/data";
 import { isArray } from "lodash";
 import { EventField, EventFieldValue } from "./TableColumns";
-import { MouseEvent, TouchEvent, ReactNode, useEffect } from "react";
+import { MouseEvent, ReactNode, TouchEvent } from "react";
 import { Anchor } from "./Anchor";
 import { Tag } from "./Tag";
 
@@ -81,7 +81,7 @@ const SourcesSeparator = styled.span`
   user-select: none;
 `;
 
-const Paragraph = styled.div`
+export const Paragraph = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -95,6 +95,15 @@ const TableRow = styled.tr<{ publication: boolean }>`
     `};
 `;
 
+export const Sources = ({sources}: {sources: string[]}) => <InlineList>
+  {sources.map((v, i) => (
+      <div key={v}>
+        {v.startsWith("http") ? <Anchor url={v} /> : v}
+        {i < sources.length - 1 && <SourcesSeparator> ; </SourcesSeparator>}
+      </div>
+  ))}
+</InlineList>
+
 export const renderCell = (
   field: EventField,
   value: EventFieldValue,
@@ -107,22 +116,13 @@ export const renderCell = (
       return (
         <Paragraph>
           {value.map((v) => (
-            <div>{v}</div>
+            <div key={v}>{v}</div>
           ))}
         </Paragraph>
       );
     }
     if (field === "sources") {
-      return (
-        <InlineList>
-          {value.map((v, i) => (
-            <div>
-              {v.startsWith("http") ? <Anchor url={v} /> : v}
-              {i < value.length - 1 && <SourcesSeparator> ; </SourcesSeparator>}
-            </div>
-          ))}
-        </InlineList>
-      );
+      return <Sources sources={value} />
     }
     if (field === "tags") {
       return (

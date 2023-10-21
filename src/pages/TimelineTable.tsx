@@ -27,6 +27,7 @@ import { PUBLICATION_COLOR } from "../theme";
 
 type Props = {
   events: TimelineEvent[];
+  tagsWithCount: Record<string, number>
 };
 
 const Container = styled.div`
@@ -87,7 +88,7 @@ const filterEvents = (
   });
 };
 
-export const TimelineTable = ({ events }: Props) => {
+export const TimelineTable = ({ events, tagsWithCount }: Props) => {
   const [filteredEvents, setFilteredEvents] = useState<TimelineEvent[]>([]);
   const [columnVisibility, setColumnVisibility] = useState(
     defaultVisibleColumns as Partial<Record<EventField, boolean>>,
@@ -110,19 +111,6 @@ export const TimelineTable = ({ events }: Props) => {
     [events],
   );
   const [yearsRange, setYearsRange] = useState<[number, number]>([0, 0]);
-  const tagsWithCount = useMemo(
-    () =>
-      events.reduce(
-        (acc, ev) => {
-          ev.tags.forEach((tag) => {
-            acc[tag] = (acc[tag] || 0) + 1;
-          });
-          return acc;
-        },
-        {} as Record<string, number>,
-      ),
-    [events],
-  );
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
   useEffect(() => {

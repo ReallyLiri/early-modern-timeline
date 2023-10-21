@@ -1,0 +1,181 @@
+import { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { BACKGROUND_COLOR, SECONDARY_COLOR } from "../theme";
+import { Communities, TagDetails } from "../data/data";
+import { get } from "lodash";
+import { Tag } from "../components/Tag";
+import { Paragraph, Sources } from "../components/TableComponent";
+
+type Props = {
+  tagsWithCount: Record<string, number>;
+  tagDetails: Record<string, TagDetails>;
+  communities: Communities;
+};
+
+const Container = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  top: 10rem;
+  right: 0;
+  border: 2px solid ${BACKGROUND_COLOR};
+  border-right: none;
+  border-radius: 1rem 0 0 1rem;
+  background-color: ${SECONDARY_COLOR};
+  color: white;
+  z-index: 1;
+`;
+
+const Hint = styled.div`
+  display: flex;
+  flex-direction: initial;
+  align-items: center;
+  justify-items: center;
+  height: 8rem;
+  width: 3rem;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 1rem;
+`;
+
+const Pane = styled.div`
+  width: 40vw;
+  height: 60vh;
+  margin: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  color: black;
+  padding: 0 0.5rem;
+  overflow: auto;
+`;
+
+const Card = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+
+  > :not(:first-child) {
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+  }
+`;
+
+const Label = styled.div`
+  font-weight: bold;
+`;
+
+const TagCard = ({
+  tag,
+  tagsWithCount,
+  relatedTags,
+  details,
+  sources,
+}: {
+  tag: string;
+  tagsWithCount: Record<string, number>;
+  relatedTags: string[];
+  details: string[];
+  sources: string[];
+}) => {
+  return (
+    <Card>
+      <Tag tag={tag} count={tagsWithCount[tag]} />
+      {relatedTags && (
+        <>
+          <Label>Related:</Label>{" "}
+          {relatedTags
+            .sort(
+              (a, b) =>
+                tagsWithCount[a] - tagsWithCount[b] || a.localeCompare(b),
+            )
+            .map((tag) => (
+              <Tag key={tag} tag={tag} count={tagsWithCount[tag]} />
+            ))}
+        </>
+      )}
+      {details && (
+        <Paragraph>
+          {details.map((v) => (
+            <div key={v}>{v}</div>
+          ))}
+        </Paragraph>
+      )}
+      {sources && <Sources sources={sources} />}
+    </Card>
+  );
+};
+
+const CloseButton = styled.div`
+  position: fixed;
+  margin-left: -20px;
+  margin-top: -12px;
+  background-color: white;
+  border-radius: 50%;
+  text-align: center;
+  padding-bottom: 2px;
+  color: ${SECONDARY_COLOR};
+  height: 1rem;
+  width: 1rem;
+  cursor: pointer;
+`;
+
+const Divider = styled.div`
+  width: 100%;
+  height: 2px;
+  border-radius: 1rem;
+  background-color: ${BACKGROUND_COLOR};
+`;
+
+export const TagsPane = ({ tagsWithCount, tagDetails, communities }: Props) => {
+  const [collapsed, setCollapsed] = useState(true);
+  const paneRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (collapsed || !paneRef.current) {
+      return;
+    }
+    const clickListener = (event: any) => {
+      if (!paneRef.current!.contains(event.target)) {
+        setCollapsed(true);
+      }
+    };
+    setTimeout(
+      () => document.addEventListener("click", clickListener, false),
+      500,
+    );
+    return () => document.removeEventListener("click", clickListener);
+  }, [collapsed]);
+
+  return (
+    <Container>
+      {collapsed ? (
+        <Hint onClick={() => setCollapsed(false)}>Tags</Hint>
+      ) : (
+        <Pane ref={paneRef}>
+          <CloseButton title="Close" onClick={() => setCollapsed(true)}>
+            X
+          </CloseButton>
+          {Object.keys(tagDetails).map((tag, index) => {
+            const details = tagDetails[tag];
+            return (
+              <>
+                {index > 0 && <Divider key={`${tag}_div`} />}
+                <TagCard
+                  key={tag}
+                  tag={tag}
+                  tagsWithCount={tagsWithCount}
+                  relatedTags={details["related_tags"] || []}
+                  details={get(details as any, "details") || []}
+                  sources={get(details as any, "sources") || []}
+                />
+              </>
+            );
+          })}
+        </Pane>
+      )}
+    </Container>
+  );
+};
