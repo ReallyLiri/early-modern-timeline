@@ -4,6 +4,7 @@
       "year": 1585,
       "title": "De Thiende",
       "tags": [
+        "publication",
         "decimal_fraction",
         "practical_math",
         "arithmetics",
@@ -26,6 +27,7 @@
       "year": 1585,
       "title": "La Disme",
       "tags": [
+        "publication",
         "decimal_fraction",
         "practical_math",
         "arithmetics",
@@ -40,7 +42,7 @@
         "Published by the original author, in the same printing shop and the same year as the Dutch version."
       ],
       "sources": [
-        "https://www.jstor.org/stable/pdf/225223.pdf , p. 156"
+        "Sarton, G. (1935). The First Explanation of Decimal Fractions and Measures (1585). Together with a History of the Decimal Idea and a Facsimile (No. XVII) of Stevin’s Disme. Isis, 23(1), 153–244. http://www.jstor.org/stable/225223, p. 156"
       ]
     },
     {
@@ -147,7 +149,7 @@
         "Used decimal fractions."
       ],
       "sources": [
-        "Denniss, 2006"
+        "Denniss, J. (2006). Arithmetical textbooks 1478 to 1886: A progression? BSHM Bulletin: Journal of the British Society for the History of Mathematics, 21(1), 26–33. https://doi.org/10.1080/17498430600566550"
       ]
     },
     {
@@ -167,7 +169,7 @@
         "Grammar school mathematics textbook."
       ],
       "sources": [
-        "Denniss, 2006"
+        "Denniss, J. (2006). Arithmetical textbooks 1478 to 1886: A progression? BSHM Bulletin: Journal of the British Society for the History of Mathematics, 21(1), 26–33. https://doi.org/10.1080/17498430600566550"
       ]
     },
     {
@@ -183,7 +185,7 @@
         "A possible reason, as suggested by Denniss (2006), is that in practical usage, they could often be circumvented by selecting a small base unit. Denniss (2006) asserts that even though decimal fractions were introduced as early as 1585, they experienced a slow adoption rate."
       ],
       "sources": [
-        "Denniss, 2006"
+        "Denniss, J. (2006). Arithmetical textbooks 1478 to 1886: A progression? BSHM Bulletin: Journal of the British Society for the History of Mathematics, 21(1), 26–33. https://doi.org/10.1080/17498430600566550"
       ]
     },
     {
@@ -212,13 +214,18 @@
         "logarithms",
         "meeting"
       ],
+      "individuals": [
+        "Henry Briggs",
+        "John Napier"
+      ],
+      "city": "Edinburgh",
       "details": [
         "Briggs met Napier in Edinburgh and discussed with him his suggestion of base 10 logarithms.",
         "It is possible that the first meeting was in 1615."
       ],
       "sources": [
-        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry",
-        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+        "1911 Encyclopædia Britannica/Briggs, Henry. (2016, April 24). In Wikisource . Retrieved 09:44, October 21, 2023, from https://en.wikisource.org/w/index.php?title=1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry&oldid=6203065",
+        "Roegel, D. (2010). A reconstruction of Briggs’ Logarithmorum chilias prima (1617), footnote 5"
       ]
     },
     {
@@ -228,14 +235,18 @@
         "logarithms",
         "meeting"
       ],
+      "individuals": [
+        "Henry Briggs",
+        "John Napier"
+      ],
       "city": "Edinburgh",
       "details": [
         "Briggs met Napier in Edinburgh for the second time and discussed with him his suggestion of base 10 logarithms.",
         "It is possible that this meeting was in 1616."
       ],
       "sources": [
-        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry",
-        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf footnote 5"
+        "1911 Encyclopædia Britannica/Briggs, Henry. (2016, April 24). In Wikisource . Retrieved 09:44, October 21, 2023, from https://en.wikisource.org/w/index.php?title=1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry&oldid=6203065",
+        "Roegel, D. (2010). A reconstruction of Briggs’ Logarithmorum chilias prima (1617), footnote 5"
       ]
     },
     {
@@ -254,7 +265,7 @@
         "A small booklet of 16 pages, privately printed, of which the first page was an introduction, and the remaining 15 pages were tables."
       ],
       "sources": [
-        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf"
+        "Roegel, D. (2010). A reconstruction of Briggs’ Logarithmorum chilias prima (1617)."
       ]
     },
     {
@@ -295,7 +306,7 @@
         "This table, which appeared a short time after Napier\u2019s table of logarithms, has often been viewed by historians as an independent invention/discovery of logarithms."
       ],
       "sources": [
-        "https://inria.hal.science/inria-00543936/document",
+        "Roegel, D. (2010). Bürgi’s Progress Tabulen (1620): logarithmic tables without logarithms. [Research Report]. ffinria-00543936f",
         "https://bildsuche.digitale-sammlungen.de/index.html?c=viewer&l=de&bandnummer=bsb00082065&pimage=00019&v=100&nav="
       ]
     },
@@ -359,8 +370,8 @@
         "Appeared posthumously."
       ],
       "sources": [
-        "https://locomat.loria.fr/briggs1617/briggs1617doc.pdf",
-        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry"
+        "Roegel, D. (2010). A reconstruction of Briggs’ Logarithmorum chilias prima (1617)",
+        "1911 Encyclopædia Britannica/Briggs, Henry. (2016, April 24). In Wikisource . Retrieved 09:44, October 21, 2023, from https://en.wikisource.org/w/index.php?title=1911_Encyclop%C3%A6dia_Britannica/Briggs,_Henry&oldid=6203065"
       ]
     },
     {
@@ -399,7 +410,7 @@
         "Includes the first printed example of a set of plus and minus signs: p\u0304 for \"plus\" and m\u0304 for \"minus\"."
       ],
       "sources": [
-        "Sangster et al., 2008"
+        "Sangster, A., Stoner, G. N., & McCarthy, P. (2008). The Market for Luca Pacioli’s Summa Arithmetica. The Accounting Historians Journal, 35(1), 111–134."
       ]
     },
     {
@@ -747,7 +758,7 @@
       "sources": [
         "https://mathshistory.st-andrews.ac.uk/Biographies/Torricelli/",
         "https://www.persee.fr/docAsPDF/rhs_0151-4105_1975_num_28_2_1131.pdf",
-        "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Torricelli,_Evangelista"
+        "1911 Encyclopædia Britannica/Torricelli, Evangelista. (2017, December 20). In Wikisource . Retrieved 09:52, October 21, 2023, from https://en.wikisource.org/w/index.php?title=1911_Encyclop%C3%A6dia_Britannica/Torricelli,_Evangelista&oldid=7151463"
       ]
     },
     {
@@ -767,7 +778,7 @@
       ],
       "sources": [
         "https://www.britannica.com/science/mathematics/Mathematics-in-the-17th-and-18th-centuries",
-        "Child, 1916"
+        "Child, J. M. (1916). Criticisms and Discussions: The “Lectiones Geometricae” of Isaac Barrow. The Monist, 26(2), 251–267. https://doi.org/10.5840/monist19162627"
       ]
     },
     {
@@ -837,7 +848,7 @@
       ],
       "details": [],
       "sources": [
-        "Strickland, 2023"
+        "Strickland, L. (2023). How Leibniz tried to tell the world he had squared the circle. Historia Mathematica, 62, 19–39. https://doi.org/10.1016/j.hm.2022.08.004"
       ]
     },
     {
@@ -903,6 +914,9 @@
         "religion",
         "views_on_antiquity",
         "mysticism"
+      ],
+      "individuals": [
+        "Giovanni Pico della Mirandola"
       ],
       "details": [
         "Pico argued that all philosophical and theological schools, including the Christianity, Kabbalah, Islam, etc., originated from the same source, and exemplify the same truth.",
@@ -1014,6 +1028,7 @@
       ],
       "author": "Petrus Ramus",
       "language": "Latin",
+      "city": "Basel",
       "details": [
         "Criticizes Plato for making mathematics too abstract and compares him to the selfish Christian theologian who usurped the study of God from the common people.",
         "Criticizes ancient mathematics for not applying mathematics to practical disciplines.",
