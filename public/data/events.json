@@ -4,6 +4,7 @@
       "year": 1585,
       "title": "De Thiende",
       "tags": [
+        "publication",
         "decimal_fraction",
         "practical_math",
         "arithmetics",
@@ -26,6 +27,7 @@
       "year": 1585,
       "title": "La Disme",
       "tags": [
+        "publication",
         "decimal_fraction",
         "practical_math",
         "arithmetics",
@@ -212,6 +214,11 @@
         "logarithms",
         "meeting"
       ],
+      "individuals": [
+        "Henry Briggs",
+        "John Napier"
+      ],
+      "city": "Edinburgh",
       "details": [
         "Briggs met Napier in Edinburgh and discussed with him his suggestion of base 10 logarithms.",
         "It is possible that the first meeting was in 1615."
@@ -227,6 +234,10 @@
       "tags": [
         "logarithms",
         "meeting"
+      ],
+      "individuals": [
+        "Henry Briggs",
+        "John Napier"
       ],
       "city": "Edinburgh",
       "details": [
