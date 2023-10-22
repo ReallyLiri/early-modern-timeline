@@ -194,7 +194,7 @@ export const TableControls = ({
         <Box width={boxWidth}>
           <StyledInput
             value={globalFilter ?? ""}
-            onChange={(value) => setGlobalFilter(String(value))}
+            onChange={(ev) => setGlobalFilter(String(ev.target.value))}
             placeholder={`Search ${
               globalFilterVisibleOnly ? "visible" : "all"
             } columns...`}

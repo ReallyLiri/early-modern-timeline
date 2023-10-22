@@ -8,13 +8,13 @@ export type TimelineEvent = TimelineEvents["events"][0] & {
 };
 
 type TagDetailsCollection = {
-  "tags": Record<string, TagDetails>[]
-}
+  tags: Record<string, TagDetails>[];
+};
 export type TagDetails = {
   related_tags: string[];
   details?: string[];
   sources?: string[];
-}
+};
 
 export type Communities = GeneratedCommunities["communities"];
 

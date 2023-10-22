@@ -20,7 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "schema-gen": "scripts/json2ts.sh"
+    "schema-gen": "scripts/json2ts.sh",
+    "pretify": "prettier --write ./src"
   },
   "eslintConfig": {
     "extends": [

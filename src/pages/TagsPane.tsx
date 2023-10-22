@@ -2,10 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BACKGROUND_COLOR, SECONDARY_COLOR } from "../theme";
 import { Communities, TagDetails } from "../data/data";
-import { get } from "lodash";
+import { get, isEmpty } from "lodash";
 import { Tag } from "../components/Tag";
 import { Paragraph, Sources } from "../components/TableComponent";
 import { useWidthAnimation } from "../components/useWidthAnimation";
+import { FlexRow } from "../components/FlexRow";
 
 type Props = {
   tagsWithCount: Record<string, number>;
@@ -84,8 +85,15 @@ const TagCard = ({
   return (
     <Card>
       <Tag tag={tag} count={tagsWithCount[tag]} />
-      {relatedTags && (
-        <>
+      {details && (
+        <Paragraph>
+          {details.map((v) => (
+            <div key={v}>{v}</div>
+          ))}
+        </Paragraph>
+      )}
+      {!isEmpty(relatedTags) && (
+        <FlexRow>
           <Label>Related:</Label>{" "}
           {relatedTags
             .sort(
@@ -95,16 +103,14 @@ const TagCard = ({
             .map((tag) => (
               <Tag key={tag} tag={tag} count={tagsWithCount[tag]} />
             ))}
+        </FlexRow>
+      )}
+      {!isEmpty(sources) && (
+        <>
+          <Label>Sources:</Label>
+          <Sources sources={sources} />
         </>
       )}
-      {details && (
-        <Paragraph>
-          {details.map((v) => (
-            <div key={v}>{v}</div>
-          ))}
-        </Paragraph>
-      )}
-      {sources && <Sources sources={sources} />}
     </Card>
   );
 };

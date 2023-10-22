@@ -95,14 +95,16 @@ const TableRow = styled.tr<{ publication: boolean }>`
     `};
 `;
 
-export const Sources = ({sources}: {sources: string[]}) => <InlineList>
-  {sources.map((v, i) => (
+export const Sources = ({ sources }: { sources: string[] }) => (
+  <InlineList>
+    {sources.map((v, i) => (
       <div key={v}>
         {v.startsWith("http") ? <Anchor url={v} /> : v}
         {i < sources.length - 1 && <SourcesSeparator> ; </SourcesSeparator>}
       </div>
-  ))}
-</InlineList>
+    ))}
+  </InlineList>
+);
 
 export const renderCell = (
   field: EventField,
@@ -122,7 +124,7 @@ export const renderCell = (
       );
     }
     if (field === "sources") {
-      return <Sources sources={value} />
+      return <Sources sources={value} />;
     }
     if (field === "tags") {
       return (
