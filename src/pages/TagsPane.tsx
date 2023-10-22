@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import { BACKGROUND_COLOR, SECONDARY_COLOR } from "../theme";
 import { Communities, TagDetails } from "../data/data";
@@ -13,6 +13,9 @@ type Props = {
   tagDetails: Record<string, TagDetails>;
   communities: Communities;
 };
+
+const HINT_WIDTH = 3;
+const HINT_WIDTH_EXTRA = 5;
 
 const Container = styled.div`
   position: absolute;
@@ -36,7 +39,8 @@ const Hint = styled.div`
   align-items: center;
   justify-items: center;
   height: 8rem;
-  width: 3rem;
+  width: ${HINT_WIDTH}rem;
+  transition: width 0.2s ease-out;
   user-select: none;
   cursor: pointer;
   padding-left: 1rem;
@@ -140,7 +144,18 @@ export const TagsPane = ({ tagsWithCount, tagDetails, communities }: Props) => {
   const [collapsed, setCollapsed] = useState(true);
   const paneRef = useRef<HTMLDivElement>(null);
   const hintRef = useRef<HTMLDivElement>(null);
-  useWidthAnimation(hintRef, 3, 5);
+  const [openedOnce, setOpenedOnce] = useState(false);
+  const shouldStopAnimation = useCallback(() => openedOnce, [openedOnce]);
+  useWidthAnimation(hintRef, HINT_WIDTH, HINT_WIDTH_EXTRA, shouldStopAnimation);
+
+  useEffect(() => {
+    if (!collapsed) {
+      setOpenedOnce(true);
+      if (hintRef.current) {
+        hintRef.current.style.width = `${HINT_WIDTH}rem`;
+      }
+    }
+  }, [collapsed]);
 
   useEffect(() => {
     if (collapsed || !paneRef.current) {

@@ -1,27 +1,21 @@
 import { RefObject, useEffect } from "react";
 
-const TRANSITION = "width 0.2s ease-out";
-
 export const useWidthAnimation = (
   ref: RefObject<HTMLElement>,
   fromWidth: number,
   toWidth: number,
+  stop: () => boolean,
 ) => {
   useEffect(() => {
-    if (!ref.current) {
+    if (!ref.current || stop()) {
       return;
     }
     const element = ref.current;
-    element.style.transition = TRANSITION;
-    element.style.width = toWidth + "rem";
-    setTimeout(() => {
-      element.style.width = fromWidth + "rem";
+    let index = 0;
+    const it = setInterval(() => {
+      element.style.width = (index === 0 ? toWidth : fromWidth) + "rem";
+      index = 1 - index;
     }, 500);
-    setTimeout(() => {
-      element.style.width = toWidth + "rem";
-    }, 1000);
-    setTimeout(() => {
-      element.style.width = fromWidth + "rem";
-    }, 1500);
-  }, [fromWidth, ref, toWidth]);
+    return () => clearInterval(it);
+  }, [fromWidth, ref, stop, toWidth]);
 };
