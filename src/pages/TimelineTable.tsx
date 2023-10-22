@@ -22,9 +22,7 @@ import {
   EventFieldValue,
 } from "../components/TableColumns";
 import { FlexFiller } from "../components/FlexFiller";
-import { TagCircle } from "../components/Tag";
-import { BACKGROUND_COLOR, PUBLICATION_COLOR, SECONDARY_COLOR } from "../theme";
-import stc from "string-to-color";
+import { PUBLICATION_COLOR, SECONDARY_COLOR } from "../theme";
 
 type Props = {
   events: TimelineEvent[];

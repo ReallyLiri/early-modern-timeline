@@ -10,8 +10,8 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.7.7",
     "string-to-color": "^2.2.2",
-    "styled-components": "^6.0.6",
-    "typescript": "^5.1.6",
+    "styled-components": "^6.1.0",
+    "typescript": "^5.2.2",
     "usehooks-ts": "^2.9.1"
   },
   "scripts": {
@@ -39,11 +39,12 @@
     ]
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.199",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/lodash": "^4.14.200",
+    "@types/node": "^20.8.7",
+    "@types/react": "^18.2.31",
+    "@types/react-dom": "^18.2.14",
     "json-schema-to-typescript": "^13.1.1",
-    "prettier": "^3.0.3",
-    "@types/node": "^20.4.6",
-    "@types/react": "^18.2.18",
-    "@types/react-dom": "^18.2.7"
+    "prettier": "^3.0.3"
   }
 }
